@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style> 
+            *{
+                box-sizing: border-box;
+            }
+            a:link{
+                color: black;
+                text-decoration: none;
+            }
+            a:visited{
+                color: #00008B;
+            }
+            a:hover{
+                color:#D76F30;
+                text-decoration: underline;
+            }
+            a:active{
+                color:red;
+            }
+            #header{
+                position: relative;
+                background:  #D76F30;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100px;
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                float: left;
+                display: flex;
+            }
+            .inlinelist{
+                position: relative;
+                display: inline-flex;
+                padding: 10px;
+                list-style-type: none;
+                color: #00008B;
+            }
+            li{
+                margin: 0 ;
+                padding: 0;
+                border: 0;
+                list-style-type: none;
+            }
+            
+            li a{
+                display: block;
+                color: #00008B;
+                text-align:center ;
+                padding: 15px 150px;
+                background-color: white;
+                float: left;
+            }
+            h2{
+                font-size: 70px;
+                line-height: 70px;
+                color:#00008B;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: lightgrey;
+                overflow-x: hidden;
+            }    
+            .container {
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+
+            .bottom-left {
+                position: absolute;
+                bottom: -2rem;
+                left: 5rem;
+                right: 5rem;
+                color:ivory;
+                font-size: xx-large;
+                font-weight: 800;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-style: italic;
+                z-index: 2;
+            
+
+            }
+            .bottom-right {
+                position: absolute;
+                bottom: 30px;
+                right: 250px;
+                font-size: xx-large;
+                color:black;
+            
+            }
+            .vision{
+                background-color: #5C4033;
+                font-size: large;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: left;
+                color: ivory;
+                display: inline-block;
+                margin-left: 170px;
+                line-height:50px ;
+                border-radius: 20px;
+                padding: 30px;
+            }
+            .hhh{
+                background-color: #D76F30;
+                padding: 50px;
+            }
+            .ppp{
+                background-color: #5C4033;
+                color: ivory;
+                display: inline-block;
+                padding: 40px;
+                margin: 50px;
+                border-radius: 30px;
+                font-size: x-large;
+            }
+            .containerdivNewLine{
+                clear: both;
+                float: left;
+                display: block;
+                position: relative;
+                background-color: #D76F30;
+                padding: 30px;
+                width: 100%;
+            }
+            input{
+                padding: auto;
+                margin-left: 500px;
+            }
+            .team{
+                background-color: #FFFDD0;
+                padding: 50px;
+                border-radius: 20px;
+                width: 100%;
+            }   
+            .img{
+                border-radius: 30px;
+                margin: 20px;
+
+            }
+            .ddiv{
+                padding: 5px;
+                background-color: #FFFDD0;
+                height: 10vh;
+                margin-right: 20px;
+                font-size: large;
+                color: #D76F30;
+                width: 400px;
+            }
+            .vl{
+                border-left: 6px solid #3c1321;
+                height: 50px;
+                position: absolute;
+                left: 50%;
+                margin-left: -3px;
+            }
+            .material-icons.md-48 { font-size: 48px; color: blue; }
+            img{
+                max-inline-size: 100%;
+                block-size: auto;
+            }
+
+/* (A) HORIZONTAL LIST */
+.hlist {
+  /* (A1) REMOVE DEFAULT INDENTATIONS */
+  padding: 0;
+  margin: 0;
+ 
+  /* (A2) FLEXIBLE BOX */
+  display: flex;
+  width: 100%;
+ 
+  /* (A3) COSMETICS */
+  background: #ffecec;
+}
+ 
+/* (B) LIST ITEMS */
+.hlist li {
+  /* (B1) REMOVE BULLET POINTS */
+  list-style-type: none;
+ 
+  /* (B2) IF YOU WANT TO KEEP THE BULLET POINTS *
+  list-style-position: inside;
+ 
+  /* (B3) DIMENSIONS */
+  box-sizing: border-box;
+  padding: 10px;
+  width: 75%; /* auto spacing */
+}
+ 
+/* (C) RESPONSIVE SUPPORT - ON SMALL SCREENS */
+@media screen and (max-width: 768px) {
+  /* (C1) ALLOW LIST ITEMS TO WRAP TO NEW ROW */
+  .hlist { flex-wrap: wrap; }
+ 
+  /* (C2) 2 ITEMS PER ROW */
+  .hlist li { width: 50%; }
+}
+</style>
+
+        </style>
+    </head>
+    <body>
+            <div>
+                <ul>
+                    <li><a class="active" href="page2.html">About</a></li>
+                    <li><a class="active" href="page4.html">Services</a></li>
+                    <li><a class="active" href="page3.html">Products</a></li>
+                    <li><a class="active" href="page3.html">Contact</a></li>
+                    <li><i class="material-icons" style="font-size: 40px;">search</i></li>
+                    <li><i class="material-icons" style="font-size: 40px;">refresh</i></li>
+                    <li><i class="material-icons" style="font-size: 40px;">recommend</i></li>
+                    <li><i class="material-icons" style="font-size: 40px;">menu</i></li>
+                </ul>
+            </div>
+
+        <div class="container">
+            <h2>THE GADGET HOUSE</h2>
+            <hr width="10%">
+            <img src="images\pexels-mike-b-130987.jpg" alt="Snow" style="width:100%; height: 70vh; border-radius: 30px; position: relative;z-index: 1;">
+            <h2 class="bottom-left">Providing An Unparalled <span style="background-color: ivory; font-size: 50px; color:rgb(3, 56, 9) ;">Experience. . .</span></h2></div>
+            <br><br>
+            <h3 style="margin: 30px; text-align: center; color: #3c1321; background-color: darkgrey;">The Gadgets House provides services and concepts that are publicly distinguished from other stores.<br> Our reputation is built on the services we have rendered, our commitment, commitment to continual re-invention and striking chords with our esteemed clients.</h3>
+            <label align="center"><h4>Sign up with your Email Address</h4></label>
+            <input style="width: 50%; height: 5vh; text-align: center;" required type="email" name="email" id="email" placeholder="user@gmail.com">
+            <br>
+            <br>
+            <a href=""> <button type="button" align="center" style="border-radius: 20px; text-align: center; justify-content: center; display: flex; margin: auto; background-color: #3c1321; color: ivory; padding: 20px;">Get Started</button></a> 
+            <div class="hhh">
+                <div class="vision">
+                    <ul>
+                        <i class="material-icons">cloud</i>
+                        <li>OUR VISION</li>
+                        <hr align="left" style="width: 10%;">
+                        <li>Sale of Quality and affordable gadgets.</li>
+                        <li>Provision of unparalled experience.</li>
+                        <li>Long lasting products.</li>
+                    </ul>
+                </div>
+                <div class="vision">
+                    <ul>
+                        <i class="material-icons">computer</i>
+                        <li>SOLUTIONS</li>
+                        <hr align="left" style="width: 10%;">
+                        <li>Best Gadget and Accessories.</li>
+                        <li>Recomendations.</li>
+                        <li>Help from our Engineer.</li>
+                    </ul>
+                </div>
+                <div class="vision" style="background-color: ivory; color: #3c1321;">
+                    <ul>
+                        <i class="material-icons">smartphone</i>
+                        <li>PRODUCTS</li>
+                        <hr align="left" style="width: 10%; color: #5C4033;">
+                        <li>Apple Products.</li>
+                        <li>Samsung Products.</li>
+                        <li>Head Sets and more.</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="vl"></div>
+            <br>
+            <div style="margin: 20px;"> 
+                <hr align="left" style="width: 10%; color: #5C4033;">
+                <h2 style="color: #3c1321;">Services.</h2>
+                <p><h3>WE WORK WITH YOU, NOT FOR YOU.</h3></p>
+                <div style="display: flex; text-align: center; justify-content: center;">
+                    <div class="ddiv"><h2 style="color: #3c1321; text-align: center; font-size: large; height: 5vh;">Brand Identity<i class="material-icons">arrow forward</i></h2></div>
+                    <div class="ddiv"><h2 style="color: #3c1321; text-align: center; font-size: large; height: 5vh;">Social Media<i class="material-icons">arrow forward</i></h2></div>              
+                    <div class="ddiv"><h2 style="color: #3c1321; text-align: center; font-size: large; height: 5vh;">Concept<i class="material-icons">arrow forward</i></h2></div>
+                </div>
+                <div style="display: flex; margin-top: 15px;justify-content: center; ">
+                    <div class="ddiv"><h2 style="color: #3c1321; text-align: center; font-size: large; height: 5vh;">Reference<i class="material-icons">arrow forward</i></h2></div>
+                    <div class="ddiv"><h2 style="color: #3c1321; text-align: center; font-size: large; height: 5vh;">Feedbacks<i class="material-icons">arrow forward</i></h2></div>
+                    <div class="ddiv"><h2 style="color: #3c1321; text-align: center; font-size: large; height: 5vh;">Content Strategy<i class="material-icons">arrow forward</i></h2></div>
+                </div>
+                <div style="display: flex; margin-top: 15px; justify-content: center;">
+                    <div class="ddiv"><h2 style="color: #3c1321; text-align: center; font-size: large; height: 5vh;">Logo<i class="material-icons">arrow forward</i></h2></div>
+                    <div class="ddiv"><h2 style="color: #3c1321; text-align: center; font-size: large; height: 5vh;">Planning<i class="material-icons">arrow forward</i></h2></div>
+                    <div class="ddiv"><h2 style="color:#3c1321; text-align: center; font-size: large; height: 5vh;">Planning<i class="material-icons">arrow forward</i></h2></div>
+                </div>
+                    
+        
+            </div>
+            <br>
+            <div class="vl"></div>
+            <br>
+            <div class="containerdivNewLine" align="center">
+                <hr align="left" width="10%"> 
+            <p><h2 style="text-align: left;">Products.</h2></p> 
+            <p><h3 style="color: ivory; text-align: left;">VARIETIES OF GADGETS YOU LOVE:</h3></p>
+            <div style="background-color: ivory; margin: 0; padding: 20px; width: 100%; border-radius: 30px;">
+                <img src="phone3.jpeg" style="height: 300px;">
+                <img src="newphone5.webp" style="height: 300px;">
+                <img src="newwp.webp" style="height: 300px;">
+                <br>
+                <img src="newph.webp" style="height: 300px;">
+                <img src="newpho.webp" style="height: 300px;">
+                <img src="phoneeee.webp" style="height: 300px;">
+                <a href="page2.html"> <button type="button" style="border-radius: 20px; text-decoration: underline; background-color: #3c1321; color: ivory; padding: 20px; margin-top: 20px; margin-left: 150px;">VIEW MORE</button></a>
+            </div>
+            <div class="vl"></div>
+                <hr width="10%" align="left"> 
+                <h2 style="color: lightgray; text-align: left;">The Team.</h2>
+                <h3 align="left" style="font-size: x-large; color: #00008B;">WE ARE NOT JUST A STORE</h3>
+                <h3 style="text-align: left; color:darkgray; text-transform: capitalize; font-family: Tahoma; ">The gadgets house provides engineering services; <br>our Engineers are available for repair of your gadgets.</h3>
+                <div class="team">
+                    <img class="img" src="repair1.jpg"width="400px">
+                    <img class="img" src="repair2.jpg" width="400px">
+                    <img class="img" src="desk2.jpeg" width="400px">
+                    <img class="img" src="customer3.png" width="900px">
+                </div>
+                <div class="vl"></div>
+                <div class="hhh" style="display: flex;">
+                    <div class="vision" style="background-color: ivory; color: #3c1321; width: 500px;">
+                        <ul>
+                            <i class="material-icons">cloud</i>
+                            <li>Who We Are</li>
+                            <hr align="left" style="width: 10%;">
+                            <li>We are The Gadget House and we have been providing clients with quality yet affordable gadgets and technical support in Nigeria since 2005</li>
+                            <li>Provision of unparalled experience.</li>
+                            <li>Long lasting products.</li>
+                        </ul>
+                    </div>
+                    <div class="vision" style="background-color: ivory; color: #3c1321; width: 500px;">
+                        <ul>
+                            <i class="material-icons">computer</i>
+                            <li>Our Philosophy</li>
+                            <hr align="left" style="width: 10%;">
+                            <li>The Gadgets house promises to bring inspiration and innovation to every business owner in the world; with starbucks to inspire and nurture the driving spirit.</li>
+                            <li>Recomendations.</li>
+                            <li>Help from our Engineer.</li>
+                        </ul>
+                    </div>
+                    <div class="vision" style="width: 500px;">
+                        <ul>
+                            <i class="material-icons">smartphone</i>
+                            <li>How we work</li>
+                            <hr align="left" style="width: 10%; color: #5C4033;">
+                            <li>We capitalize on providing the best in the areas of distribution, production and repair.</li>
+                            <li>You can check our App on google play store and app store.</li>
+                            <li>Head Sets and more.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div> 
+        </div>
+        <div style="background-color: ivory; text-align: center;">
+            <img src="ph.webp" style="float: right; margin: 0 0 30px 10px;">
+            <hr width="10%" style="color: #00008B;">
+            <h2>What Our Clients Say.</h2>
+            <h3>WE ARE MORE THAN A GADGET STORE</h3>
+            <P style=" display: inline-block; width: 50%; line-height: 50px; height: 40vh; color: #3c1321; font-size: larger; background-color: #FFFDD0; font-family: Verdana, Geneva, Tahoma, sans-serif;"><em> The contentment of our customers drives our motivation. Put your faith in us, and take pat in our expansion.<br> We are a group of tech-loving professionals who are skilled, dedicated and experienced.<br> Our goal is for our customers to be fulfilled after their patronage.<br> Do share in our growth and never regret it.</em><br><hr width="10%"><br><h3>CEO. AREMO PIPELOLUWA.</h3></P>
+        </div>
+        <hr width="80%" align="center">
+        <div align="center">
+            <ul  style="display: flex; font-size: xx-large; color: #3c1321;">
+                <li style="margin-right: 390px; border-right: #D76F30; font-family: verdana;">d'<span style="font-weight: 800;">evices</span></li>
+                <li style="margin-right: 390px; font-weight: 900; font-family: arial;">Technology</li>
+                <li style="margin-right: 390px; font-family: Franklin Gothic Medium;">SUCCESS</li>
+                <li style="margin-right: 390px; font-weight: 900; font-family: Georgia;">Accessories</li>
+            </ul>
+            <div class="vl"></div>
+        </div>
+        <div class="container">
+            <h2>Latest News.</h2>
+            <p style="font-size: larger; color: #3c1321; font-weight: 700;">CHECK OUT SOME OF OUR THOUGHTS</p>
+            <img src="phonee.webp" style="width: 40%; height: 51.7vh;">
+            <img src="newphone4.jpg" style="width: 40%;">
+            <br><br>
+            <div class="vl"></div>
+            <br><br>
+        
+            <hr width="10%">
+            <div style="display: flex; background-color: #FFFDD0;">
+                <div class="vision" style="background-color: #FFFDD0; color: #3c1321; width: 500px;">
+                    <i class="material-icons" style="font-size: 60px; background-color:#3ddc84; color: white;">android</span></i>
+                    <i class="material-icons" style="font-size: 60px; background-color: #3b5998; color: white;">facebook</i>
+                    <i class="material-icons" style="font-size: 60px;">home</i>
+                </div>
+                <div class="vision" style="width: 500px; background-color: #FFFDD0;">
+                    <ul>
+                        <li>
+                            <h2 style="color: #3c1321;">Let's Talk?</h2>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vision" style="background-color: #FFFDD0; color: #3c1321; width: 500px;">
+                    <a href="page1.html"> <button type="button" align="center" style="border-radius: 20px; text-align: center; justify-content: center; display: flex; margin: auto; font-size: larger; background-color: #5C4033; color:ivory; padding: 20px;">Make an enquiry!</button></a> 
+                </div>
+
+            </div>
+            <div style="display: flex; background-color: ivory; height: 20vh;">
+                <div class="vision" style="background-color: ivory; color: #D76F30; width: 500px;">
+                    <h3 style="font-size: 20px;">Lagos<br><hr width="10%" align="left">+234 81122332</h3>
+                </div>
+                <div class="vision" style="background-color: ivory; color: #D76F30; width: 500px;">
+                    <h3 style="font-size: 20px;">Abuja <br><hr width="10%" align="left">+234 55566611</h3>
+
+                </div>
+
+            </div>
+        </div>
+        <footer style=" padding: 50px; text-align: center; height: 10vh; background-color: rgb(49, 48, 48); color: white;"> @copyright peculiar 2023- All Rights Reserved.</footer>
+    </body>
+</html>

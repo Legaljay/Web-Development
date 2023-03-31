@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top-section {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            margin-top: -100px;
+            width: 100%;
+            max-height: 800px;
+            z-index: 1;
+            position: absolute;
+        }
+
+        #Nav-bar1 {
+            display: flexbox;
+            margin-top: -10px;
+        }
+        .Nav-bar1-elements { 
+            display: flexbox;
+            margin-top: -30px;
+            margin-left: 50px;
+            padding-right: auto;
+            padding-left: auto;
+            color: white;
+            position: relative;
+            top: -28px;
+        }
+        .Nav-bar1-Logo {
+            display: inline-flex;
+            margin-top: -90px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2px;
+            font-size: 24px;
+            font-family: Verdana;
+            color: white;
+            position: relative;
+            top: -30px;
+            z-index: ;
+        }
+        .Nav-bar1-element {
+            display: flex;
+            padding: 10px;
+            margin-left: 5px;
+            margin-top: -40px;
+            margin-right: 100px;
+            font-family: Verdana;
+            color: white;
+            position: relative;
+            top: -2px;
+            /* float: right; */
+        }
+        #Nav-bar2 {
+            display: flex;
+        }
+        .Nav-bar2-elements {
+            display: flex;
+            padding: 10px 10px 10px 10px;
+            margin-top: -15px;
+            margin-left: 50px;
+            font-size: 19px;
+            color: white;
+            position: relative;
+            top: -35px;
+        }
+        
+        .parallelogram {
+	    width: 100px;
+	    height: 30px;
+        border: 0;
+        left: 210px;
+	    transform: skew(-20deg);
+	    background: #fc7643;
+        position: relative;
+        color: white;
+        z-index: 2;
+        }
+
+        .trapezoid1 {
+            border-top: 80px solid #fc7643;
+	        border-left: 25px solid transparent;
+	        border-right: 25px solid transparent;
+	        height: 0;
+	        width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 2;
+            position: relative;
+            display: flex;
+        }
+        .trapezoid2 {
+            border-top: 60px solid #273248;
+	        border-left: 25px solid transparent;
+	        border-right: 25px solid transparent;
+	        height: 0;
+	        width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+            display: flex;
+        }
+        
+        h4 {
+            position: relative;
+            z-index: 2;
+            color: grey;
+            margin-top: 140px;
+            margin-left: 130px;
+            font-size: 25px;
+            text-align: justify;
+        }
+        .text { 
+            font-size: 60px;
+            font-family: 'Times New Roman';
+            color: black;
+            text-align: justify;
+        }
+        .important {
+            color: #fc7643;
+        }
+        .buttons {
+            position: relative;
+            left: 1050px;
+            bottom: -90px;
+            margin-right: 5px;
+            /* margin-left: 1000px; */
+        }
+
+        .container {
+            background-color: white;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            position: relative;
+
+        }
+
+        body {
+            margin: 0;
+        }
+
+        /* Split the screen in half */
+        .split {
+            margin-top: 680px;
+            height: 60%;
+            width: 50%;
+            position: absolute;
+            /* z-index: 0; */
+            top: 0;
+            padding-top: 20px;
+            display: flex;
+        }
+
+        /* Control the left side */
+        .left {
+            left: 0;
+            background-color: white;
+        }
+
+        /* Control the right side */
+        .right {
+            right: 0;
+            background-color: whitesmoke;
+            overflow: scroll;
+        }
+
+        /* If you want the content centered horizontally and vertically */
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: justify;
+        }
+        .images-sectleft {
+            position: relative;
+
+        }
+
+        /* Style the image inside the centered container, if needed */
+        /* .centered img { */
+            /* width: 300px; */
+            /* height: 400px; */
+            /* border-color: white; */
+            /* border-width: 60px; */
+        /* } */
+        .images1 {
+            position: relative;
+            z-index: 2;
+            width: 300px;
+            height: 300px;
+            /* border: solid white 4px; */
+        }
+        .images2 {
+            position: relative;
+            z-index: 2;
+            width: 300px;
+            height: 300px;
+            border: solid white 8px;
+
+        }
+        #About {
+            color: #fc7643;
+        }
+        #Services {
+            display: flex;
+            color: #fc7643;
+        }
+        h1 {
+            text-align: center;
+            text-shadow: #273248;
+            position: relative;
+        }
+        * {
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+  position: relative;
+  top: 1500px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  position: relative;
+  top: 1200px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+
+    }
+    
+}
+
+.links {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                float: left;
+                color:#af8057;
+                text-align: center;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px;
+                line-height: 25px;
+                border-radius: 4px;
+                background-color: #fffdd0;
+                margin-right: 10px;
+                width: 300px;
+                text-align: center;
+            }
+    nav .links:hover {
+                background-color:#3c1321 ;
+                color: ivory;
+                }
+                nav .selected {
+                    background-color: #c3b08b;
+                    color: white;
+                }
+                .rightSection {
+                    float: right;
+                }
+                @media screen and (max-width: 870px) {
+                .top-section
+                {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+                .rightSection {
+                 float: none;
+                 }
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="Nav-bar1" class="trapezoid1">
+            <!-- <div class="Nav-bar1-elements">24/7 +234819999999</div> -->
+            <div class="Nav-bar1-Logo"><p>meubles</p></div>
+            <!-- <div class="Nav-bar1-element"> -->
+                <!-- <select required class="input-item" name="EN"> -->
+                    <!-- <option value="francais">Fran</option> -->
+                    <!-- <option value="Spanish">Span</option> -->
+                    <!-- <option value="Yoruba">Yor</option> -->
+                    <!-- <option value="Igbo">Oginni</option> -->
+                <!-- </select> -->
+            <!-- </div> -->
+            <!-- <div class="Nav-bar1-element"> -->
+                <!-- <select required class="input-item" name="USD"> -->
+                    <!-- <option value="Pounds">Pds</option> -->
+                    <!-- <option value="Euro">Eur</option> -->
+                    <!-- <option value="Naira">NGN</option> -->
+                </select>
+            <!-- </div> -->
+        </div>
+        <div id="Nav-bar2">
+            <nav>
+                <div class="rightSection">
+                <a class="selected links" href="h">Home</a>
+                <a class="links" href="#">Contact Us</a>
+                <a class="links" href="#">About Us</a>
+                <a class="links" href="#">More Info</a>
+                <a class="links" href="#">Register</a>
+            </nav>
+            <!-- <a href="#Home" class="Nav-bar2-elements">Home</a>
+            <a href="#Project" class="Nav-bar2-elements">Projects</a>
+            <a href="#About" class="Nav-bar2-elements">About Us</a>
+            <a href="#Service" class="Nav-bar2-elements">Services</a>
+            <a href="#Blog" class="Nav-bar2-elements">Blog</a>
+            <a href="#Shop" class="Nav-bar2-elements">Shop</a>
+            <a href="#Contact" class="Nav-bar2-elements">Contact Us</a> -->
+        </div>
+        <div class="top-section">
+            <img  class="top-section" src="images\pexels-vecislavas-popa-1571469.jpg" alt="parametric bench">
+            <pre style="position: relative;"><h4>
+                There are many variations
+                <span class="text">LOREM IPSUM
+            SIMPLY <span class="important">TEXT OF</span>
+            THE PRINTING</span></h4>
+                <button class="parallelogram">MORE</button>
+            </pre>
+            <span class="buttons">
+            <button class="parallelogram">PREV</button>
+            <button class="parallelogram">NEXT</button>
+            </span>
+        </div>
+
+        <div class="split left">
+            <div style="position: absolute;">
+            <div style="display: flex; position: relative; top: 100px; left: 150px;">
+                <img class="images1" src="images\Beige.png" alt="Beige">
+            </div>
+            <div style="display: flex; position: relative; top: 250px;left: 10px;" >
+                <img class="images2" src="images\Round.png" alt="Round">
+            </div>
+            </div>
+        </div>
+        
+        <div class="split right">
+            <div class="centered">
+            <h2 id="About">" About us</h2>
+            <p style="font-size: 13px; font-family: 'Times New Roman';">A furniture company is an essential aspect of the interior design industry. Whether it's a residential, commercial, or industrial setting, furniture is a crucial aspect of every space. When it comes to choosing furniture for your space, you want something that's not only functional but also adds to the aesthetic appeal of your room. That's where our furniture company comes in - we provide high-quality, durable, and stylish furniture for every taste and budget.
+                Our furniture company is a leading provider of exceptional furniture for all kinds of settings. We offer a wide range of furniture options, from sofas, chairs, tables, cabinets, and many more. Our team of experienced and creative designers work tirelessly to ensure that our furniture pieces are not only functional but also appealing to the eye. We understand that furniture is a reflection of your personality and style, and that's why we offer a broad range of options that cater to different tastes.
+                We pride ourselves on using the finest materials to create furniture pieces that stand the test of time. Our craftsmen have a wealth of experience in furniture making, and their attention to detail is unrivaled. We understand that quality is essential, and that's why we don't compromise on it. From selecting the right materials to ensuring that every piece is well-crafted, we take every step necessary to produce furniture pieces that exceed our clients' expectation. Whether you're looking for something traditional or modern, we've got you covered. From customized options to high-quality materials, our furniture pieces are the perfect addition to any space. So, if you're looking for furniture that's not only functional but also stylish, come visit us today, and let's transform your space into something extraordinary!</p>
+            <button class="parallelogram">MORE</button>
+            </div>
+        </div>
+        <div id="Services" style="position: relative; top: 1200px; background-color: #273248; height: 200px;width: 100%;">
+            <h2 id="Services">" Services we do</h2>
+            <button class="parallelogram">View all projects</button>
+        </div>
+        <!-- Header -->
+        <div class="header">
+            <h1>Responsive Image Grid</h1>
+            <p>Resize the browser window to see the responsive effect.</p>
+        </div>
+        
+        <!-- Photo Grid -->
+        <div class="row"> 
+            <div class="column">
+            <img src="images\Beige.png" style="width:100%">
+            <img src="images\parametric bench.jpg" style="width:100%">
+            <img src="images\pexels-athena-2180883.jpg" style="width:100%">
+            <img src="images\pexels-designecologist-1008692.jpg" style="width:100%">
+            <img src="images\pexels-dmitry-zvolskiy-1544420.jpg" style="width:100%">
+            <img src="images\pexels-dominika-roseclay-1110562.jpg" style="width:100%">
+            <img src="images\pexels-donald-tong-189295.jpg" style="width:100%">
+            </div>
+            <div class="column">
+            <img src="images\pexels-donald-tong-189333.jpg" style="width:100%">
+            <img src="images\pexels-element-digital-1125137.jpg" style="width:100%">
+            <img src="images\pexels-houzlook-com-3797991.jpg" style="width:100%">
+            <img src="images\pexels-igor-starkov-914388.jpg" style="width:100%">
+            <img src="images\pexels-juan-pablo-serrano-arenas-967016.jpg" style="width:100%">
+            <img src="images\pexels-ken-tomita-389819.jpg" style="width:100%">
+            </div>  
+            <div class="column">
+            <img src="images\pexels-kevin-menajang-982614.jpg" style="width:100%">
+            <img src="images\pexels-lisa-fotios-1957478.jpg" style="width:100%">
+            <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
+            <img src="images\pexels-mike-b-116910.jpg" style="width:100%">
+            <img src="images\pexels-mike-b-130987.jpg" style="width:100%">
+            <img src="images\pexels-photo-4352247.jpeg" style="width:100%">
+            <img src="images\pexels-pixabay-259580.jpg" style="width:100%">
+            </div>
+            <div class="column">
+            <img src="images\pexels-terje-sollie-298842.jpg" style="width:100%">
+            <img src="images\pexels-tiana-2995012.jpg" style="width:100%">
+            <img src="images\pexels-vecislavas-popa-1571463.jpg" style="width:100%">
+            <img src="images\pexels-vecislavas-popa-1571468.jpg" style="width:100%">
+            <img src="images\pexels-vecislavas-popa-1571469.jpg" style="width:100%">
+            <img src="images\pexels-vecislavas-popa-1669799.jpg" style="width:100%">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

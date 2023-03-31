@@ -4,131 +4,1031 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Improvement on Form</title>
-<style>
-    form {
-        background-color: white;
-        width: 500px;
-        margin-top: 80px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 35px;
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
-    #form-heading {
-        font-size: 32px;
-        padding-top: 56px;
-        padding-bottom: 32px;
-    }
-    .heading {
-        font-family: Arial, Helvetica, sans-serif;
-        font-style: normal;
-        text-align: center;
-        color: #0056ff;
-        font-weight: 900;
+    <title>Trying A clients Landing Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .container {
 
-    }
-    #terms-check {
-        margin-top: 12px;
-        margin-bottom: 18px;  
-    }
-    .input-item {
+        }
+        .container1 {
+            position: relative;
+            text-align: center;
+            color: yellow;
+        }
+        .bottom-right {
+            position: absolute;
+            bottom: 180px;
+            right: 16px;
+        }
+        
+        .container2 {
+            position: relative;
+            /* text-align: center; */
+            color: #273248;
+        }
+        /* Split the screen in half */
+        .split {
+        height: 480px;
+        width: 50%;
+        position: absolute;
+        z-index: 1;
+        top: 830px;
+        overflow-x: hidden;
+        padding-top: 20px;
+        }
+        /* Control the left side */
+        .left {
+        left: 0;
+        background-color: white;
+        }
+
+        /* Control the right side */
+        .right {
+        right: 0;
+        background-color: whitesmoke;
+        padding: 50px;
+        }
+
+        /* .split-left {
+            position: absolute;
+            top: 800; 
+            bottom: -280px;
+            right: 0px;
+            background-color: whitesmoke;
+            width: 900px;
+            height: 300px;
+            padding: 30px;
+            overflow-x: scroll;
+        }
+        .split-right {
+            position: absolute;
+            bottom: -220px;
+            left: 10px;
+            background-color: red;
+            width: 1200px;
+        } */
+        .container3 {
+            position: relative;
+            text-align: center;
+            /* color: ; */
+        }
+        #Services {
+            position: absolute; 
+            top: 1230px; 
+            background-color: #273248; 
+            height: 160px;
+            width: 100%;
+            left: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+        margin: 0;
+        font-family: Arial;
+        overflow-x: hidden;
+        }
+
+        .row {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+        position: relative;
+        top: 1200px;
+        }
+
+        .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+            } 
+        }
+        .work-process {
+            background-color: white;
+            position: relative;
+            top: 1230px;
+            left: 1px;
+            overflow-y: hidden;
+        }
+        .text-border {
+            display: inline-block;
+            border: grey dashed 2px;
+            padding: 4px;
+            margin-bottom: 10px;
+        }
+        #shop {
+            background-color: white;
+            position: relative;
+            top: 1300px;
+            /* bottom: ;
+            height: ; */
+            width: 100%;
+        }
+        .back-images {
+            height: 300px;
+            width: 100%;
+        }
+        .overlay {
+        position: absolute; 
+        background: #273248;
+        opacity: 0.8;
+
+        /* center overlay text */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        }
+        .overlay_2 {
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        }
+        .overlay_3 {
+            top: 1250px;
+            /* right: 0; */
+            left: 12.5%;
+            z-index: 2;
+            background-color: #fc7643;
+            overflow-wrap: break-word;
+            
+        }
+        .showcase {
+            position: relative;
+            /* display: flex; */
+            height: 100px;
+            width: 75%;
+            background-color: #fc7643;
+            overflow-wrap: break-word;
+        }
+        .adv {
+            position: relative;
+            display: inline-block;
+            padding: 14px;
+            margin-left: 0px;
+            color: white;
+            font-family: Arial;
+            font-size: 28px;
+            text-align: center;
+            white-space: pre-line;
+        }
+
+         /* body {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Arial;
+        } */
+
+        /* Center website */
+        .main {
+        max-width: 1000px;
+        margin: auto;
+        }
+
+        h1 {
+        font-size: 50px;
+        word-break: break-all;
+        }
+
+        .row1 {
+        margin: 10px -16px;
+        }
+
+        /* Add padding BETWEEN each column */
+        .row1,
+        .row1 > .column1 {
+        padding: 8px;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column1 {
+        float: left;
+        width: 33.33%;
+        display: none; /* Hide all elements by default */
+        }
+
+        /* Clear floats after rows */ 
+        .row1:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* Content */
+        .content {
+        background-color: whitesmoke;
+        padding: 10px;
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+        display: block;
+        }
+
+        /* Style the buttons */
+        .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: white;
+        cursor: pointer;
+        }
+
+        .btn:hover {
+        background-color: #ddd;
+        }
+
+        .btn.active {
+        background-color: #666;
+        color: white;
+        }
+        #contact-us {
+            position: absolute;
+            bottom: -3150px;
+            width: 100%;
+            height: 600px;
+            background-color: #273248;
+        }
+        .top-section {
+            /* margin: 0;
+            padding: 0;
+            border: 0;
+            margin-top: 0px;
+            width: 100%;
+            max-height: 800px;*/
+           
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 0; 
+        } 
+
+        #Nav-bar1 {
+            display: flexbox;
+            margin-top: -10px;
+        }
+        /* .Nav-bar1-elements { 
+            display: flexbox;
+            margin-top: -30px;
+            margin-left: 50px;
+            padding-right: auto;
+            padding-left: auto;
+            color: white;
+            position: relative;
+            top: -28px;
+        } */
+        /* .Nav-bar1-Logo {
+            display: inline-flex;
+            margin-top: -90px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2px;
+            font-size: 24px;
+            font-family: Verdana;
+            color: white;
+            position: relative;
+            top: -30px;
+            z-index: ;
+        } */
+        /* .Nav-bar1-element {
+            display: flex;
+            padding: 10px;
+            margin-left: 5px;
+            margin-top: -40px;
+            margin-right: 100px;
+            font-family: Verdana;
+            color: white;
+            position: relative;
+            top: -2px;
+            /* float: right; 
+        }
+
+        /* #Nav-bar2 {
+            display: flex;
+        } */
+        /* .Nav-bar2-elements {
+            display: flex;
+            padding: 10px 10px 10px 10px;
+            margin-top: -15px;
+            margin-left: 50px;
+            font-size: 19px;
+            color: white;
+            position: relative;
+            top: -35px;
+        } */
+        
+        .parallelogram {
+	    width: 100px;
+	    height: 35px;
+        border: 0;
+	    transform: skew(-20deg);
+	    background: #fc7643;
+        color: white;
+        /* z-index: 2; */
+        }
+
+        .parallelogram:hover {
+            color: #273248;
+        /* text-decoration: underline; */
+        background-color: orange;
+        }
+
+        .trapezoid1 {
+            border-top: 80px solid #fc7643;
+	        border-left: 25px solid transparent;
+	        border-right: 25px solid transparent;
+	        height: 3px;
+	        width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1;
+            position: relative;
+        }
+        .trapezoid2 {
+            border-top: 60px solid #273248;
+	        border-left: 25px solid transparent;
+	        border-right: 25px solid transparent;
+	        height: 0;
+	        width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+            
+        }
+
+        #Nav-bar2 {
+            display: flex;
+            min-width: 0;
+        }
+        .Nav-bar2-elements {
+            display: inline-block;
+            padding: 7px 0px 7px 0px;
+            /* margin-top: -15px; */
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 14px;
+            /* background-color: ; */
+            color: white;
+            /* position: relative; */
+            /* top: -40px; */
+            text-decoration: none;
+        }
+
+        .text { 
+            font-size: 45px;
+            font-family: 'Times New Roman';
+            color: black;
+        }
+        .important {
+            color: #fc7643;
+        }
+
+        .design-text {
+            position: relative;
+            top: -30px;
+            padding: 7px;
+            margin: 2.2rem;
+            display: inline;
+            color: white;
+            text-align: center;
+        } 
+
+        .design-text:hover {
+            color: #273248;
+        /* text-decoration: underline; */
+        background-color: #fc7643;
+        }
+
+        #About {
+            text-align: center;
+            color: #fc7643;
+        }
+
+        .overlayHr {
+        /* position: absolute; 
+        background: #273248;
+        opacity: 0.8; */
+
+        /* center overlay text */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        }
+        .overlay_Hr {
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        }
+
+        .overlay1 {
+        position: absolute; 
+        background: #273248;
+        opacity: 1;
+
+        /* center overlay text  */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        }
+
+        .overlaytext {
+            position: absolute; 
+            background: yellow;
+            width: 50%;
+            height:50vh;
+
+            /* center overlay text  */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .center-text {
+            top: 300px;
+            left: 0;
+            right:;
+        }
+
+        @media screen and (max-width: 870px) {
+                .overlaytext .center .trapezoid2 .trapezoid1
+                {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+            }
+        .overlayText-half {
+            left: 0;
+            width: 50%;
+            height: 65vh;
+        }
+
+        .overlayText-right{
+            right: 0;
+            width: 50%;
+            height: 65vh;
+        }
+
+        .overlayBottom {
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 5vh;
+            background:#fc7643;
+        }
+
+        .position {
+            position: absolute;
+            bottom: 25rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* .middle {
+            position: absolute;
+            left: ;
+            right: ;
+            top: ;
+            bottom: ;
+        } */
+        .middle-right {
+            position: absolute;
+            /* top: 50%;
+            left: 40%; */
+            top: 24rem;
+            left: 4rem;
+            right: 96rem;
+            /* transform: translate(-155%, -50%); */
+        }
+        .input-item {
         font-size: 14px;
         padding-top: 12px;
         padding-bottom: 12px;
         margin-bottom: 3px;
         border: 0;
+        border-radius: 10px;
         border-bottom: 1px solid #0056ff;
         resize: none;
         line-height: 160%;
-        width: 90%;
-    }
-    .input-label {
-        margin: 0;
-        margin-bottom: 4px;
-        margin-top: 12px;
-        color: grey;
-    }
-    #submit-btn {
-        background-color: #0056ff;
-        padding-left: 18px;
-        padding-right: 18px;
+        width: 70%;
+        opacity: 0.6;
+        color: black;
+        }
+
+        #submit-btn {
+        background-color: whitesmoke;
+        padding-left: 10px;
+        padding-right: 10px;
         padding-top: 12px;
         padding-bottom: 12px;
         font-size: 14px;
-        color: white;
+        color: grey;
         border: none;
         border-radius: 10px;
-    }
-    #submit-btn:hover {
-        color: orange;
+        line-height: 160%;
+        }
+        #submit-btn:hover {
+        color: #273248;
         /* text-decoration: underline; */
-        background-color: green;
-    }
-    body {
-        background-blend-mode: soft-light;
-        margin: 0;
-        background-image: url(https://plus.unsplash.com/premium_photo-1676064229109-e95eb8e8a7bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0N3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+        background-color: #fc7643;
+        }
 
-</style>
+        .overlay2 {
+        position: absolute; 
+        background: #fc7643;
+        opacity: 1;
+
+        /* center overlay text  */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        }
+
+        .overlayBottomR {
+            bottom: 0;
+            width: 100%;
+            height: 5vh;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+        position: relative;
+        background: whitesmoke;
+        }
+
+        /* Slides */
+        .mySlides {
+        display: none;
+        padding: 150px;
+        text-align: center;
+        }
+
+        /* Next & previous buttons */
+        .prev {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: auto;
+        margin-top: -20px;
+        padding: 16px;
+        color: #888;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: auto;
+        margin-top: -20px;
+        padding: 16px;
+        color: #888;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 3px 0 0 3px;
+        user-select: none;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        color: white;
+        }
+
+        /* The dot/bullet/indicator container */
+        .dot-container {
+        text-align: center;
+        padding: 5px;
+        background: whitesmoke;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        /* Add a background color to the active dot/circle */
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        /* Add an italic font style to all quotes */
+        q {font-style: italic;}
+
+        /* Add a blue color to the author */
+        .author {color: cornflowerblue;}
+
+        /* .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+        float: left;
+        } */
+        
+        /* .images2 {
+            height: 45%; 
+            width: 50vh; 
+            border: white solid 4px;
+        } */
+
+    </style>
+    <script>
+        filterSelection("all") // Execute the function and show all columns
+        function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column1");
+        if (c == "all") c = "";
+        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+        for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+            }
+        }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+
 </head>
 <body>
-<form>
-    <h1 class="heading">Signup</h1>
-    <div>
-        <!-- <p class="input-label">Full Name</p> -->
-        <input required class="input-item" type="text" name="full-name" placeholder="Full name">
-    </div>
-    <div>
-        <!-- <p class="input-label">Email</p> -->
-        <input required class="input-item" type="email" name="email" placeholder="Email">
-    </div>
-    <div>
-        <!-- <p class="input-label">Phone number</p> -->
-        <input required class="input-item" type="phone-number" name="phone number" placeholder="Phone number">
-    </div>
-    <div>
-        <!-- <p class="input-label">Password</p> -->
-        <input required class="input-item" type="password" name="password" placeholder="Password">
-    </div>
-    <div>
-        <!-- <p class="input-label">Confirm password</p> -->
-        <input required class="input-item" type="password" name="password" placeholder="Confirm password">
-    </div>
+    <!-- <div id="header" class='button-holder'>
+        <h2 id="header" class="company-name">meubles</h2>
+        <input id="search-text-input" type="text" name="search" placeholder="Search">
+    </div> -->
+    <div class="container">
+        <div id="Nav-bar1" class="trapezoid1 overlayHr">
+            <h1 style="position: relative;top: -34px;display: inline-block; color:white; font-family: Arial; font-size: 35px;">Meubles</h1>
+            <!-- <div class="Nav-bar1-element"> -->
+                <!-- <select required class="input-item" name="EN"> -->
+                    <!-- <option value="francais">Fran</option> -->
+                    <!-- <option value="Spanish">Span</option> -->
+                    <!-- <option value="Yoruba">Yor</option> -->
+                    <!-- <option value="Igbo">Oginni</option> -->
+                <!-- </select> -->
+            <!-- </div> -->
+            <!-- <div class="Nav-bar1-element"> -->
+                <!-- <select required class="input-item" name="USD"> -->
+                    <!-- <option value="Pounds">Pds</option> -->
+                    <!-- <option value="Euro">Eur</option> -->
+                    <!-- <option value="Naira">NGN</option> -->
+                </select>
+            <!-- </div> -->
+        </div>
+        <div class="trapezoid2">
+            <div id="Nav-bar2 overlayHr" >
+                <!-- <ul style="position: relative; margin-left: -9%;" class="overlayHr"> -->
+                <a href="#Home" class="Nav-bar2-elements design-text">Home</a>
+                <a href="#About" class="Nav-bar2-elements design-text">About</a>
+                <a href="#Services" class="Nav-bar2-elements design-text">Services</a>
+                <a href="#Project" class="Nav-bar2-elements design-text">Projects</a>
+                <a href="#contact-us" class="Nav-bar2-elements design-text">Contact Us</a>
+                <a href="#Blog" class="Nav-bar2-elements design-text">Blog</a>
+                <a href="#Shop" class="Nav-bar2-elements design-text">Shop</a>
+                
+            </div>
+        </div>
+        <div class="top-section">
+            <img  style="height:800px; width:100%;" src="images\pexels-vecislavas-popa-1571469.jpg" alt="parametric bench">
+            <div class="overlaytext center-text">
+                <pre><h4>
+                There are many variations
+                <span class="text">LOREM IPSUM
+        SIMPLY <span class="important">TEXT OF</span>
+        THE PRINTING</span></h4>
+                <button class="parallelogram"><a style="text-decoration: none; color: white;" href=#About>MORE</a></button>
+                </pre>
+            </div>
+            <div class="bottom-right">
+                <div style="display: inline-block;">
+                    <button class="parallelogram"><a style="text-decoration: none; color: white;" href="">PREV</a></button>
+                    <button class="parallelogram"><a  style="text-decoration: none; color: white;" href="">NEXT</a></button>
+                </div>
+            </div>
+            <div class="split left">
+                    <div style="display: flex; justify-content: center;align-items: center;">
+                        <img  style="height: 360px; width: 300px; border: white solid 5px; border-radius: 20px;" src="images\Beige.png" alt="Beige">
+                        <img style="height: 300px; width: 250px; border: white solid 5px; border-radius: 20px;" src="images\Round.png" alt="Round">
+                    </div>
+                    <!-- <div style="display: flex; top: 8px; left: 10px; justify-content: right;border: white solid 8px;" >
+                        <img style="height: 300px; width: 250px;" src="images\Round.png" alt="Round">
+                    </div> -->
+            </div>
+            <div class="split right">
+                <h2 id="About">" About us</h2>
+                <p style="font-size: 13px; font-family: 'Times New Roman'; text-align: justify;">Furniture is a crucial aspect of every space. When it comes to choosing furniture for your space, you want something that's not only functional but also adds to the aesthetic appeal of your room. That's where our furniture company comes in - we provide high-quality, durable, and stylish furniture for every taste and budget.
+                Our furniture company is a leading provider of exceptional furniture for all kinds of settings. We offer a wide range of furniture options, from sofas, chairs, tables, cabinets, and many more. Our team of experienced and creative designers work tirelessly to ensure that our furniture pieces are not only functional but also appealing to the eye. We understand that furniture is a reflection of your personality and style, and that's why we offer a broad range of options that cater to different tastes.
+                We pride ourselves on using the finest materials to create furniture pieces that stand the test of time. Our craftsmen have a wealth of experience in furniture making, and their attention to detail is unrivaled. We understand that quality is essential, and that's why we don't compromise on it. From selecting the right materials to ensuring that every piece is well-crafted, we take every step necessary to produce furniture pieces that exceed our clients' expectation. Whether you're looking for something traditional or modern, we've got you covered. From customized options to high-quality materials, our furniture pieces are the perfect addition to any space. So, if you're looking for furniture that's not only functional but also stylish, come visit us today, and let's transform your space into something extraordinary!</p>
+                <button class="parallelogram">MORE</button>
+            </div>
+        </div>
+       
+        <div class="container3">
+            <div style="height: 200px; width: 100%;">
+                <span id="Services">
+                    <h2 style="color:white">" Services we do</h2>
+                    <button class="parallelogram"><a style="text-decoration: none; color:white" href="#Project">View all projects</a></button>
+                </span>
+                <div style="width:100%; height: 100px; position:absolute; bottom: -2200px;left: 0;right: 0; background-color: #273248;">
+                    <label style="color: whitesmoke;"><h2>" Our Clients</h2></label>
+            </div>
+            
+            <div id="contact-us">
+                <img style="width: 50%;height: 65vh;position: absolute; left: 0;" src="images\pexels-houzlook-com-3797991.jpg" alt="pexels-houzlook-com-3797991">
+                <div class="overlay overlayText-half">
+                    <span style="display: block;">
+                        <h2 style="font-family: 'Times New Roman'; font-size: 26px; color: white;">aliquip ex ea commodo consequat duis aute !</h2>
+                        <h2 style="color:white; font-size: 10px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eligendi voluptates beatae, enim placeat reprehenderit.</h2>
+                    </span>
+                </div>
+                <div class="overlay1 overlayBottom">
+                    <p style="color: white; font-family: serif; font-size: 14px;">@2022 interior. All rights reserved. Created by Legal</p>
+                </div>
+                <!-- <div style="position: absolute; left: 300px; color: white;">
+                    <h1>Meubles</h1>
+                    <p>Subscribe to keep up with the latest news</p>
+                    <p>GET IN TOUCH</p>
+                </div> -->
+                <form class="overlay overlayText-right">
+                    <div class="position">
+                        <span style="display: block">
+                                        <h1 style>Meubles</h1>
+                                        <p>GET IN TOUCH</p>
+                        </span>
+                    </div>
+                    <div class="middle">
+                        <span style="display: inline-block;">
+                            <h1 style="font-size: 12px;">Subscribe to keep up with
+                                the latest news</h1>
+                        <input required class="input-item" type="email" name="email" placeholder="Email Address">
+                        <button id="submit-btn">Register</button>
+                        <script type="text/Javascript">
+                            alert("Successfully submitted");
+                        </script>
+                        </span>
+                    </div>
+                    <div class="overlay2 overlayBottomR">
+                        <ul>
+                            <li class="design-text"><a href="#Home" class="Nav-bar2-elements">Home</a></li>
+                            <li class="design-text"><a href="#Project" class="Nav-bar2-elements">Projects</a></li>
+                            <li class="design-text"><a href="#About" class="Nav-bar2-elements">About Us</a></li>
+                            <li class="design-text"><a href="#Services" class="Nav-bar2-elements">Services</a></li>
+                            <li class="design-text"><a href="#Blog" class="Nav-bar2-elements">Blog</a></li>
+                            <li class="design-text"><a href="#Shop" class="Nav-bar2-elements">Shop</a></li>
+                            <li class="design-text"><a href="#contact-us" class="Nav-bar2-elements">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div style="position:absolute; bottom: -2540px;background-color: whitesmoke; width: 100%;height: 380px;">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
 
-    <div>
-        <p class="input-label">Gender:</p>
-        <input required type="radio" name="sex">Male</input>
-        <input required type="radio" name="sex">Female</input>
-        <input required type="radio" name="sex">Other</input>
-    </div>
-    <div>
-        <p class="input-label">Security Question:</p>
-        <select required class="input-item" name="security-question">
-        <option value="first-pet-name">What was your first pet name</option>
-        <option value="first-job">What was your first job</option>
-        <option value="nickname">What is your nickname</option>
-        </select>
-    </div>
-    <div>
-        <textarea required class="input-item" maxlength="182" name="answer" id="" cols="23" rows="5"></textarea>
-    </div>
-    <div>
-        <input required id="terms-check" type="checkbox" name="terms-condition" value="accept"> I agree to accept terms and conditions
-    </div>
-    <div>
-        <button id="submit-btn">Register</button>
-        <script type="text/Javascript">
-            alert("Successfully submitted");
-        </script>
-    </div>
-</form>
+                    <!-- Full-width slides/quotes -->
+                    <div class="mySlides">
+                    <q>I love the way the management relates well with me and were able to give me the best suit my budget.</q>
+                    <p class="author">- John Olusola</p>
+                    </div>
+                
+                    <div class="mySlides">
+                        <q>Top notch service with quality material in use. I've been using their products for 5 years now and no issue.</q>
+                        <p class="author">- Aremo O. Pipeloluwa</p>
+                    </div>
+                
+                    <div class="mySlides">
+                        <q>I was at first their customer but now a redistributor for the company. Such a reliable company is hard to find these days.</q>
+                        <p class="author">- Faramade O. Isaac</p>
+                    </div>
+                
+                    <!-- Next/prev buttons -->
+                    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                
+                <!-- Dots/bullets/indicators -->
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
     
+        </div>
+            <div class="row"> 
+                <div class="column">
+                    <img src="images\Beige.png" style="width:100%">
+                    <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
+                    <!-- <img src="images\parametric bench.jpg" style="width:100%"> -->
+                    <!-- <img src="images\pexels-athena-2180883.jpg" style="width:100%">
+                    <img src="images\pexels-designecologist-1008692.jpg" style="width:100%">
+                    <img src="images\pexels-dmitry-zvolskiy-1544420.jpg" style="width:100%">
+                    <img src="images\pexels-dominika-roseclay-1110562.jpg" style="width:100%">
+                    <img src="images\pexels-donald-tong-189295.jpg" style="width:100%"> -->
+                </div>
+                <div class="column">
+                    <img src="images\pexels-donald-tong-189333.jpg" style="width:100%">
+                    <img src="images\pexels-element-digital-1125137.jpg" style="width:100%">
+                    <!-- <img src="images\pexels-houzlook-com-3797991.jpg" style="width:100%">
+                    <img src="images\pexels-igor-starkov-914388.jpg" style="width:100%">
+                    <img src="images\pexels-juan-pablo-serrano-arenas-967016.jpg" style="width:100%">
+                    <img src="images\pexels-ken-tomita-389819.jpg" style="width:100%"> -->
+                </div>  
+                <div class="column">
+                    <img src="images\pexels-kevin-menajang-982614.jpg" style="width:100%">
+                    <img src="images\pexels-lisa-fotios-1957478.jpg" style="width:100%">
+                    <!-- <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
+                    <img src="images\pexels-mike-b-116910.jpg" style="width:100%">
+                    <img src="images\pexels-mike-b-130987.jpg" style="width:100%">
+                    <img src="images\pexels-photo-4352247.jpeg" style="width:100%">
+                    <img src="images\pexels-pixabay-259580.jpg" style="width:100%"> -->
+                </div>
+                <div class="column">
+                    <img src="images\pexels-terje-sollie-298842.jpg" style="width:100%">
+                    <img src="images\pexels-tiana-2995012.jpg" style="width:100%">
+                    <!-- <img src="images\pexels-vecislavas-popa-1571463.jpg" style="width:100%">
+                    <img src="images\pexels-vecislavas-popa-1571468.jpg" style="width:100%">
+                    <img src="images\pexels-vecislavas-popa-1571469.jpg" style="width:100%">
+                    <img src="images\pexels-vecislavas-popa-1669799.jpg" style="width:100%"> -->
+                </div>
+            </div>
+            <div class="work-process">
+                <h2>" Our work process make your dream true</h2> <h4>Read more..</h4>
+                <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum.</span><span class="text-border">Lorem ipsum dolor sit amet.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
+                <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
+                <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span>
+            </div>
+            <div id="shop">
+                <img class="back-images" src="images\pexels-jean-van-der-meulen-1457843.jpg" alt="Pipe">
+                <div class="overlay overlay_2">
+                    <h2 style="font-family: 'Times New Roman'; font-size: 26px;">Luxury interior design !</h2>
+                </div>
+            </div>
+        <div>
+            <div class="showcase overlay_3">
+                <div class="overlayHr">
+                <span class="adv">16 + <pre><h6 style="font-size: 10px;">Years of experience</h6></pre></span>
+                <span class="adv">352 + <pre><h6 style="font-size: 10px;">Project completed</h6></pre></span>
+                <span class="adv">74 + <pre><h6 style="font-size: 10px;">Excellent team</h6></pre></span>
+                <span class="adv">98 + <pre><h6 style="font-size: 10px;">Our happy clients</h6></pre></span>
+                </div>
+                <div style="background-color: white; height: 70px; width: 100%; position: absolute; top: 90px;">
+                    <h2 id="Project">" Latest Project</h2>
+                <div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')"> View all</button>
+                    <button class="btn" onclick="filterSelection('nature')"> Contemporary</button>
+                    <button class="btn" onclick="filterSelection('cars')"> Classic</button>
+                    <button class="btn" onclick="filterSelection('people')"> Mixed</button>
+                </div>
+                <!-- Portfolio Gallery Grid -->
+                <div class="row1" style="padding: 10px">
+                <div class="column1 nature">
+                    <div class="content">
+                        <img src="images\pexels-vecislavas-popa-1669799.jpg" alt="Mountains" style="width:100%">
+                        <h4>Mountains</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column1 nature">
+                    <div class="content">
+                        <img src="images\pexels-vecislavas-popa-1571469.jpg" alt="Lights" style="width:100%">
+                        <h4>Lights</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column1 nature">
+                    <div class="content">
+                        <img src="images\pexels-vecislavas-popa-1571468.jpg" alt="Nature" style="width:100%">
+                        <h4>Forest</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column1 cars">
+                    <div class="content">
+                        <img src="images\pexels-vecislavas-popa-1571463.jpg" alt="Car" style="width:100%">
+                        <h4>Retro</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column1 cars">
+                    <div class="content">
+                        <img src="images\pexels-pixabay-259580.jpg" alt="Car" style="width:100%">
+                        <h4>Fast</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <!-- END GRID-->
+            </div>
+        </div>    
+            
+    </div>
 </body>
+<p></p>
 </html>

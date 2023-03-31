@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Improvement on Form</title>
+<style>
+    form {
+        background-color: white;
+        width: 500px;
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 35px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    #form-heading {
+        font-size: 32px;
+        padding-top: 56px;
+        padding-bottom: 32px;
+    }
+    .heading {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        text-align: center;
+        color: #0056ff;
+        font-weight: 900;
+
+    }
+    #terms-check {
+        margin-top: 12px;
+        margin-bottom: 18px;  
+    }
+    .input-item {
+        font-size: 14px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 3px;
+        border: 0;
+        border-bottom: 1px solid #0056ff;
+        resize: none;
+        line-height: 160%;
+        width: 90%;
+    }
+    .input-label {
+        margin: 0;
+        margin-bottom: 4px;
+        margin-top: 12px;
+        color: grey;
+    }
+    #submit-btn {
+        background-color: #0056ff;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 14px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+    }
+    #submit-btn:hover {
+        color: orange;
+        /* text-decoration: underline; */
+        background-color: green;
+    }
+    body {
+        background-blend-mode: soft-light;
+        margin: 0;
+        background-image: url(https://plus.unsplash.com/premium_photo-1676064229109-e95eb8e8a7bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0N3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+</style>
+</head>
+<body>
+<form>
+    <h1 class="heading">Signup</h1>
+    <div>
+        <!-- <p class="input-label">Full Name</p> -->
+        <input required class="input-item" type="text" name="full-name" placeholder="Full name">
+    </div>
+    <div>
+        <!-- <p class="input-label">Email</p> -->
+        <input required class="input-item" type="email" name="email" placeholder="Email">
+    </div>
+    <div>
+        <!-- <p class="input-label">Phone number</p> -->
+        <input required class="input-item" type="phone-number" name="phone number" placeholder="Phone number">
+    </div>
+    <div>
+        <!-- <p class="input-label">Password</p> -->
+        <input required class="input-item" type="password" name="password" placeholder="Password">
+    </div>
+    <div>
+        <!-- <p class="input-label">Confirm password</p> -->
+        <input required class="input-item" type="password" name="password" placeholder="Confirm password">
+    </div>
+
+    <div>
+        <p class="input-label">Gender:</p>
+        <input required type="radio" name="sex">Male</input>
+        <input required type="radio" name="sex">Female</input>
+        <input required type="radio" name="sex">Other</input>
+    </div>
+    <div>
+        <p class="input-label">Security Question:</p>
+        <select required class="input-item" name="security-question">
+        <option value="first-pet-name">What was your first pet name</option>
+        <option value="first-job">What was your first job</option>
+        <option value="nickname">What is your nickname</option>
+        </select>
+    </div>
+    <div>
+        <textarea required class="input-item" maxlength="182" name="answer" id="" cols="23" rows="5"></textarea>
+    </div>
+    <div>
+        <input required id="terms-check" type="checkbox" name="terms-condition" value="accept"> I agree to accept terms and conditions
+    </div>
+    <div>
+        <button id="submit-btn">Register</button>
+        <script type="text/Javascript">
+            alert("Successfully submitted");
+        </script>
+    </div>
+</form>
+    
+</body>
+</html>
