@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         .container {
-
-        }
-        .container1 {
             position: relative;
-            text-align: center;
-            color: yellow;
         }
         .bottom-right {
             position: absolute;
@@ -32,7 +27,7 @@
         width: 50%;
         position: absolute;
         z-index: 1;
-        top: 830px;
+        top: 0;
         overflow-x: hidden;
         padding-top: 20px;
         }
@@ -67,18 +62,16 @@
             background-color: red;
             width: 1200px;
         } */
-        .container3 {
+        /* .container3 {
             position: relative;
             text-align: center;
-            /* color: ; */
-        }
+            color: ;
+        } */
         #Services {
             position: absolute; 
-            top: 1230px; 
             background-color: #273248; 
             height: 160px;
             width: 100%;
-            left: 0;
         }
         * {
             box-sizing: border-box;
@@ -104,7 +97,7 @@
         max-width: 25%;
         padding: 0 4px;
         position: relative;
-        top: 1200px;
+        top: 0;
         }
 
         .column img {
@@ -132,9 +125,8 @@
         }
         .work-process {
             background-color: white;
-            position: relative;
-            top: 1230px;
-            left: 1px;
+            top: 0;
+            left: 0;
             overflow-y: hidden;
         }
         .text-border {
@@ -145,8 +137,8 @@
         }
         #shop {
             background-color: white;
-            position: relative;
-            top: 1300px;
+            position: absolute;
+            top: o;
             /* bottom: ;
             height: ; */
             width: 100%;
@@ -173,20 +165,19 @@
         bottom: 0;
         }
         .overlay_3 {
-            top: 1250px;
+            top: 0;
             /* right: 0; */
             left: 0;
-            right: 0;
             z-index: 2;
             background-color: #fc7643;
             overflow-wrap: break-word;
             
         }
         .showcase {
-            position: relative;
+            position: absolute;
             /* display: flex; */
             height: 100px;
-            width: 100%;
+            width: 75%;
             background-color: #fc7643;
             overflow-wrap: break-word;
         }
@@ -272,10 +263,7 @@
         color: white;
         }
         #contact-us {
-            position: absolute;
-            bottom: -3150px;
-            width: 100%;
-            height: 600px;
+            bottom: 0;
             background-color: #273248;
         }
         .top-section {
@@ -529,8 +517,8 @@
             position: absolute;
             /* top: 50%;
             left: 40%; */
-            top: 24rem;
-            left: 4rem;
+            top: 0;
+            left: 0;
             right: 96rem;
             /* transform: translate(-155%, -50%); */
         }
@@ -680,6 +668,19 @@
             border: white solid 4px;
         } */
 
+        .column3 {
+            float: left;
+            width: 25%;
+            padding: 5px;
+            }
+
+            /* Clearfix (clear floats) */
+            .row3::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
+
     </style>
     <script>
         filterSelection("all") // Execute the function and show all columns
@@ -761,32 +762,12 @@
 
 </head>
 <body>
-    <!-- <div id="header" class='button-holder'>
-        <h2 id="header" class="company-name">meubles</h2>
-        <input id="search-text-input" type="text" name="search" placeholder="Search">
-    </div> -->
-    <div class="container">
-        <div id="Nav-bar1" class="trapezoid1 overlayHr">
-            <h1 style="position: relative;top: -34px;display: inline-block; color:white; font-family: Arial; font-size: 35px;">Meubles</h1>
-            <!-- <div class="Nav-bar1-element"> -->
-                <!-- <select required class="input-item" name="EN"> -->
-                    <!-- <option value="francais">Fran</option> -->
-                    <!-- <option value="Spanish">Span</option> -->
-                    <!-- <option value="Yoruba">Yor</option> -->
-                    <!-- <option value="Igbo">Oginni</option> -->
-                <!-- </select> -->
-            <!-- </div> -->
-            <!-- <div class="Nav-bar1-element"> -->
-                <!-- <select required class="input-item" name="USD"> -->
-                    <!-- <option value="Pounds">Pds</option> -->
-                    <!-- <option value="Euro">Eur</option> -->
-                    <!-- <option value="Naira">NGN</option> -->
-                </select>
-            <!-- </div> -->
+<div class="container">
+        <div style="background: #0056ff;" class="Section1">
+            <h1 style="position: relative;top: -34px;display: text-align:center; inline-block; color:rgb(55, 25, 2); font-family: Arial; font-size: 35px;">Meubles</h1>
         </div>
-        <div class="trapezoid2">
-            <div id="Nav-bar2 overlayHr" >
-                <!-- <ul style="position: relative; margin-left: -9%;" class="overlayHr"> -->
+        <div  style="background: yellow;" class="section2">
+            <div>
                 <a href="#Home" class="Nav-bar2-elements design-text">Home</a>
                 <a href="#About" class="Nav-bar2-elements design-text">About</a>
                 <a href="#Services" class="Nav-bar2-elements design-text">Services</a>
@@ -794,36 +775,26 @@
                 <a href="#contact-us" class="Nav-bar2-elements design-text">Contact Us</a>
                 <a href="#Blog" class="Nav-bar2-elements design-text">Blog</a>
                 <a href="#Shop" class="Nav-bar2-elements design-text">Shop</a>
-                
             </div>
         </div>
-        <div class="top-section">
+        <div style="background: purple;" class="section3">
             <img  style="height:800px; width:100%;" src="images\pexels-vecislavas-popa-1571469.jpg" alt="parametric bench">
-            <!-- <div class="overlaytext center-text">
-                <pre><h4>
-                There are many variations
-                <span class="text">LOREM IPSUM
-        SIMPLY <span class="important">TEXT OF</span>
-        THE PRINTING</span></h4>
-                <button class="parallelogram"><a style="text-decoration: none; color: white;" href=#About>MORE</a></button>
-                </pre>
-            </div> -->
-            <div class="bottom-right">
+            <div class="">
                 <div style="display: inline-block;">
                     <button class="parallelogram"><a style="text-decoration: none; color: white;" href="">PREV</a></button>
                     <button class="parallelogram"><a  style="text-decoration: none; color: white;" href="">NEXT</a></button>
                 </div>
             </div>
-            <div class="split left">
+            <div class="">
                     <div style="display: flex; justify-content: center;align-items: center;">
                         <img  style="height: 360px; width: 300px; border: white solid 5px; border-radius: 20px;" src="images\Beige.png" alt="Beige">
                         <img style="height: 300px; width: 250px; border: white solid 5px; border-radius: 20px;" src="images\Round.png" alt="Round">
                     </div>
                     <!-- <div style="display: flex; top: 8px; left: 10px; justify-content: right;border: white solid 8px;" >
                         <img style="height: 300px; width: 250px;" src="images\Round.png" alt="Round">
-                    </div> -->
+                    </div>-->
             </div>
-            <div class="split right">
+            <div class="">
                 <h2 id="About">" About us</h2>
                 <p style="font-size: 13px; font-family: 'Times New Roman'; text-align: justify;">Furniture is a crucial aspect of every space. When it comes to choosing furniture for your space, you want something that's not only functional but also adds to the aesthetic appeal of your room. That's where our furniture company comes in - we provide high-quality, durable, and stylish furniture for every taste and budget.
                 Our furniture company is a leading provider of exceptional furniture for all kinds of settings. We offer a wide range of furniture options, from sofas, chairs, tables, cabinets, and many more. Our team of experienced and creative designers work tirelessly to ensure that our furniture pieces are not only functional but also appealing to the eye. We understand that furniture is a reflection of your personality and style, and that's why we offer a broad range of options that cater to different tastes.
@@ -831,19 +802,185 @@
                 <button class="parallelogram">MORE</button>
             </div>
         </div>
-       
-        <div class="container3">
-            <div style="height: 200px; width: 100%;">
-                <span id="Services">
-                    <h2 style="color:white">" Services we do</h2>
-                    <button class="parallelogram"><a style="text-decoration: none; color:white" href="#Project">View all projects</a></button>
-                </span>
-                <div style="width:100%; height: 100px; position:absolute; bottom: -2200px;left: 0;right: 0; background-color: #273248;">
-                    <label style="color: whitesmoke;"><h2>" Our Clients</h2></label>
+        
+        <div> 
+        <div style="background: green;" id="Services">
+            <div>
+                <h2 style="color:white">" Services we do</h2>
+                <button class="parallelogram"><a style="text-decoration: none; color:white" href="#Project">View all projects</a></button>
             </div>
-            
-            <div id="contact-us">
-                <img style="width: 50%;height: 65vh;position: absolute; left: 0;" src="images\pexels-houzlook-com-3797991.jpg" alt="pexels-houzlook-com-3797991">
+        </div>
+        <div style="background: red; height: 40vh;" class="row3">
+
+                
+                        <div class="column3">
+                            <img src="images\pexels-donald-tong-189295.jpg" style="width:100%; height: 20vh;">
+                        </div>
+                        <div class="column3">
+                            <img src="images\pexels-mike-b-130987.jpg" style="width:100%; height:20vh;">
+                        </div>
+                        <div class="column3">
+                            <img src="images\pexels-juan-pablo-serrano-arenas-967016.jpg" style="width:100%; height:20vh;">
+                        </div>
+                        <div class="column3">
+                            <img src="images\pexels-pixabay-259580.jpg" style="width:100%; height:20vh;">
+                        </div>
+             
+        </div>
+            <!-- <div class="row">
+                    <div class="column">
+                        <img src="images\Beige.png" style="width:100%">
+                        <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
+                        <img src="images\parametric bench.jpg" style="width:100%">
+                        <img src="images\pexels-athena-2180883.jpg" style="width:100%">
+                        <img src="images\pexels-designecologist-1008692.jpg" style="width:100%">
+                        <img src="images\pexels-dmitry-zvolskiy-1544420.jpg" style="width:100%">
+                        <img src="images\pexels-dominika-roseclay-1110562.jpg" style="width:100%">
+                        <img src="images\pexels-donald-tong-189295.jpg" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="images\pexels-donald-tong-189333.jpg" style="width:100%">
+                        <img src="images\pexels-element-digital-1125137.jpg" style="width:100%">
+                        <img src="images\pexels-houzlook-com-3797991.jpg" style="width:100%">
+                        <img src="images\pexels-igor-starkov-914388.jpg" style="width:100%">
+                        <img src="images\pexels-juan-pablo-serrano-arenas-967016.jpg" style="width:100%">
+                        <img src="images\pexels-ken-tomita-389819.jpg" style="width:100%">
+                    </div>  
+                    <div class="column">
+                        <img src="images\pexels-kevin-menajang-982614.jpg" style="width:100%">
+                        <img src="images\pexels-lisa-fotios-1957478.jpg" style="width:100%">
+                        <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
+                        <img src="images\pexels-mike-b-116910.jpg" style="width:100%">
+                        <img src="images\pexels-mike-b-130987.jpg" style="width:100%">
+                        <img src="images\pexels-photo-4352247.jpeg" style="width:100%">
+                        <img src="images\pexels-pixabay-259580.jpg" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="images\pexels-terje-sollie-298842.jpg" style="width:100%">
+                        <img src="images\pexels-tiana-2995012.jpg" style="width:100%">
+                        <img src="images\pexels-vecislavas-popa-1571463.jpg" style="width:100%">
+                        <img src="images\pexels-vecislavas-popa-1571468.jpg" style="width:100%">
+                        <img src="images\pexels-vecislavas-popa-1571469.jpg" style="width:100%">
+                        <img src="images\pexels-vecislavas-popa-1669799.jpg" style="width:100%">
+                    </div>
+            </div> -->
+
+        </div>
+        
+        <div style="background-color: cadetblue;" class="work-process">
+            <h2>" Our work process make your dream true</h2> <h4>Read more..</h4>
+            <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum.</span><span class="text-border">Lorem ipsum dolor sit amet.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
+            <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
+            <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span>
+        </div>
+        
+        <div id="shop">
+            <img class="back-images" src="images\pexels-jean-van-der-meulen-1457843.jpg" alt="Pipe">
+            <div class="overlay overlay_2">
+                <h2 style="font-family: 'Times New Roman'; font-size: 26px;">Luxury interior design !</h2>
+            </div>
+        </div>
+        <div style="background: magenta;">
+            <div>
+                <div style="background-color: white; height: 70px;">
+                    <h2 id="Project">" Latest Project</h2>
+                </div>
+                    <div id="myBtnContainer">
+                        <button class="btn active" onclick="filterSelection('all')"> View all</button>
+                        <button class="btn" onclick="filterSelection('nature')"> Contemporary</button>
+                        <button class="btn" onclick="filterSelection('cars')"> Classic</button>
+                        <button class="btn" onclick="filterSelection('people')"> Mixed</button>
+                    </div>
+                    <!-- Portfolio Gallery Grid -->
+                    <div class="row1" style="padding: 10px">
+                    <div class="column1 nature">
+                        <div class="content">
+                            <img src="images\pexels-vecislavas-popa-1669799.jpg" alt="Mountains" style="width:100%">
+                            <h4>Mountains</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column1 nature">
+                        <div class="content">
+                            <img src="images\pexels-vecislavas-popa-1571469.jpg" alt="Lights" style="width:100%">
+                            <h4>Lights</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column1 nature">
+                        <div class="content">
+                            <img src="images\pexels-vecislavas-popa-1571468.jpg" alt="Nature" style="width:100%">
+                            <h4>Forest</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column1 cars">
+                        <div class="content">
+                            <img src="images\pexels-vecislavas-popa-1571463.jpg" alt="Car" style="width:100%">
+                            <h4>Retro</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column1 cars">
+                        <div class="content">
+                            <img src="images\pexels-pixabay-259580.jpg" alt="Car" style="width:100%">
+                            <h4>Fast</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div style="background-color: darkslateblue;">
+            <span class="adv">16 + <pre><h6 style="font-size: 10px;">Years of experience</h6></pre></span>
+            <span class="adv">352 + <pre><h6 style="font-size: 10px;">Project completed</h6></pre></span>
+            <span class="adv">74 + <pre><h6 style="font-size: 10px;">Excellent team</h6></pre></span>
+            <span class="adv">98 + <pre><h6 style="font-size: 10px;">Our happy clients</h6></pre></span>
+        </div>
+        <div style="background-color: lightcoral;">
+            <div style="width:100%; height: 100px; background-color: #273248; position: absolute;">
+                <label style="color: whitesmoke;"><h2>" Our Clients</h2></label>
+            </div>
+        </div>
+        
+         
+        <div style="background-color: goldenrod;">
+
+             <!-- Dots/bullets/indicators -->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width slides/quotes-->
+                <div class="mySlides">
+                    <q>I love the way the management relates well with me and were able to give me the best suit my budget.</q>
+                    <p class="author">- John Olusola</p>
+                </div>
+                    
+                <div class="mySlides">
+                    <q>Top notch service with quality material in use. I've been using their products for 5 years now and no issue.</q>
+                    <p class="author">- Aremo O. Pipeloluwa</p>
+                </div>
+                    
+                <div class="mySlides">
+                    <q>I was at first their customer but now a redistributor for the company. Such a reliable company is hard to find these days.</q>
+                   <p class="author">- Faramade O. Isaac</p>
+                </div>
+                    
+                <!-- Next/prev buttons-->
+                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+            </div>
+             
+        </div>
+     
+        <div style="background-color: cyan;" id="contact-us">
+
+            <div style="width: 50%;height: 65vh;position: absolute; left: 0;">
+                <!-- <img  src="images\pexels-houzlook-com-3797991.jpg" alt="pexels-houzlook-com-3797991"> -->
                 <div class="overlay overlayText-half">
                     <span style="display: block;">
                         <h2 style="font-family: 'Times New Roman'; font-size: 26px; color: white;">aliquip ex ea commodo consequat duis aute !</h2>
@@ -853,16 +990,13 @@
                 <div class="overlay1 overlayBottom">
                     <p style="color: white; font-family: serif; font-size: 14px;">@2022 interior. All rights reserved. Created by Legal</p>
                 </div>
-                <!-- <div style="position: absolute; left: 300px; color: white;">
-                    <h1>Meubles</h1>
-                    <p>Subscribe to keep up with the latest news</p>
-                    <p>GET IN TOUCH</p>
-                </div> -->
-                <form class="overlay overlayText-right">
+            </div>
+            <div>
+                <form>
                     <div class="position">
                         <span style="display: block">
-                                        <h1 style>Meubles</h1>
-                                        <p>GET IN TOUCH</p>
+                                    <h1 style>Meubles</h1>
+                                    <p>GET IN TOUCH</p>
                         </span>
                     </div>
                     <div class="middle">
@@ -876,7 +1010,7 @@
                         </script>
                         </span>
                     </div>
-                    <div class="overlay2 overlayBottomR">
+                    <div class="">
                         <ul>
                             <li class="design-text"><a href="#Home" class="Nav-bar2-elements">Home</a></li>
                             <li class="design-text"><a href="#Project" class="Nav-bar2-elements">Projects</a></li>
@@ -889,141 +1023,7 @@
                     </div>
                 </form>
             </div>
-            <div style="position:absolute; bottom: -2540px;background-color: whitesmoke; width: 100%;height: 330px;">
-                <!-- Slideshow container -->
-                <div class="slideshow-container">
-
-                    <!-- Full-width slides/quotes -->
-                    <div class="mySlides">
-                    <q>I love the way the management relates well with me and were able to give me the best suit my budget.</q>
-                    <p class="author">- John Olusola</p>
-                    </div>
-                
-                    <div class="mySlides">
-                        <q>Top notch service with quality material in use. I've been using their products for 5 years now and no issue.</q>
-                        <p class="author">- Aremo O. Pipeloluwa</p>
-                    </div>
-                
-                    <div class="mySlides">
-                        <q>I was at first their customer but now a redistributor for the company. Such a reliable company is hard to find these days.</q>
-                        <p class="author">- Faramade O. Isaac</p>
-                    </div>
-                
-                    <!-- Next/prev buttons -->
-                    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                
-                <!-- Dots/bullets/indicators -->
-                <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-            </div>
-    
-        </div>
-            <div class="row"> 
-                <div class="column">
-                    <img src="images\Beige.png" style="width:100%">
-                    <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
-                    <!-- <img src="images\parametric bench.jpg" style="width:100%"> -->
-                    <!-- <img src="images\pexels-athena-2180883.jpg" style="width:100%">
-                    <img src="images\pexels-designecologist-1008692.jpg" style="width:100%">
-                    <img src="images\pexels-dmitry-zvolskiy-1544420.jpg" style="width:100%">
-                    <img src="images\pexels-dominika-roseclay-1110562.jpg" style="width:100%">
-                    <img src="images\pexels-donald-tong-189295.jpg" style="width:100%"> -->
-                </div>
-                <div class="column">
-                    <img src="images\pexels-donald-tong-189333.jpg" style="width:100%">
-                    <img src="images\pexels-element-digital-1125137.jpg" style="width:100%">
-                    <!-- <img src="images\pexels-houzlook-com-3797991.jpg" style="width:100%">
-                    <img src="images\pexels-igor-starkov-914388.jpg" style="width:100%">
-                    <img src="images\pexels-juan-pablo-serrano-arenas-967016.jpg" style="width:100%">
-                    <img src="images\pexels-ken-tomita-389819.jpg" style="width:100%"> -->
-                </div>  
-                <div class="column">
-                    <img src="images\pexels-kevin-menajang-982614.jpg" style="width:100%">
-                    <img src="images\pexels-lisa-fotios-1957478.jpg" style="width:100%">
-                    <!-- <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
-                    <img src="images\pexels-mike-b-116910.jpg" style="width:100%">
-                    <img src="images\pexels-mike-b-130987.jpg" style="width:100%">
-                    <img src="images\pexels-photo-4352247.jpeg" style="width:100%">
-                    <img src="images\pexels-pixabay-259580.jpg" style="width:100%"> -->
-                </div>
-                <div class="column">
-                    <img src="images\pexels-terje-sollie-298842.jpg" style="width:100%">
-                    <img src="images\pexels-tiana-2995012.jpg" style="width:100%">
-                    <!-- <img src="images\pexels-vecislavas-popa-1571463.jpg" style="width:100%">
-                    <img src="images\pexels-vecislavas-popa-1571468.jpg" style="width:100%">
-                    <img src="images\pexels-vecislavas-popa-1571469.jpg" style="width:100%">
-                    <img src="images\pexels-vecislavas-popa-1669799.jpg" style="width:100%"> -->
-                </div>
-            </div>
-            <div class="work-process">
-                <h2>" Our work process make your dream true</h2> <h4>Read more..</h4>
-                <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum.</span><span class="text-border">Lorem ipsum dolor sit amet.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
-                <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
-                <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span>
-            </div>
-            <div id="shop">
-                <img class="back-images" src="images\pexels-jean-van-der-meulen-1457843.jpg" alt="Pipe">
-                <div class="overlay overlay_2">
-                    <h2 style="font-family: 'Times New Roman'; font-size: 26px;">Luxury interior design !</h2>
-                </div>
-            </div>
-        <div>
-            <div class="showcase overlay_3">
-                <div class="overlayHr">
-                <span class="adv">16 + <pre><h6 style="font-size: 10px;">Years of experience</h6></pre></span>
-                <span class="adv">352 + <pre><h6 style="font-size: 10px;">Project completed</h6></pre></span>
-                <span class="adv">74 + <pre><h6 style="font-size: 10px;">Excellent team</h6></pre></span>
-                <span class="adv">98 + <pre><h6 style="font-size: 10px;">Our happy clients</h6></pre></span>
-                </div>
-                <div style="background-color: white; height: 70px; width: 100%; position: absolute; top: 90px;">
-                    <h2 id="Project">" Latest Project</h2>
-                <div id="myBtnContainer">
-                    <button class="btn active" onclick="filterSelection('all')"> View all</button>
-                    <button class="btn" onclick="filterSelection('nature')"> Contemporary</button>
-                    <button class="btn" onclick="filterSelection('cars')"> Classic</button>
-                    <button class="btn" onclick="filterSelection('people')"> Mixed</button>
-                </div>
-                <!-- Portfolio Gallery Grid -->
-                <div class="row1" style="padding: 10px">
-                <div class="column1 nature">
-                    <div class="content">
-                        <img src="images\pexels-vecislavas-popa-1669799.jpg" alt="Mountains" style="width:100%">
-                        <h4>Mountains</h4>
-                    </div>
-                </div>
-                <div class="column1 nature">
-                    <div class="content">
-                        <img src="images\pexels-vecislavas-popa-1571469.jpg" alt="Lights" style="width:100%">
-                        <h4>Lights</h4>
-                    </div>
-                </div>
-                <div class="column1 nature">
-                    <div class="content">
-                        <img src="images\pexels-vecislavas-popa-1571468.jpg" alt="Nature" style="width:100%">
-                        <h4>Forest</h4>
-                    </div>
-                </div>
-                <div class="column1 cars">
-                    <div class="content">
-                        <img src="images\pexels-vecislavas-popa-1571463.jpg" alt="Car" style="width:100%">
-                        <h4>Retro</h4>
-                    </div>
-                </div>
-                <div class="column1 cars">
-                    <div class="content">
-                        <img src="images\pexels-pixabay-259580.jpg" alt="Car" style="width:100%">
-                        <h4>Fast</h4>
-                    </div>
-                </div>
-                <!-- END GRID-->
-            </div>
-        </div>    
-            
-    </div>
+        </div>  
+</div>
 </body>
 </html>
