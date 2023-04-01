@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,59 +71,24 @@
         background-size: cover;
     }
 
-</style>
+</style> -->
 </head>
 <body>
-<form>
-    <h1 class="heading">Signup</h1>
-    <div>
-        <!-- <p class="input-label">Full Name</p> -->
-        <input required class="input-item" type="text" name="full-name" placeholder="Full name">
-    </div>
-    <div>
-        <!-- <p class="input-label">Email</p> -->
-        <input required class="input-item" type="email" name="email" placeholder="Email">
-    </div>
-    <div>
-        <!-- <p class="input-label">Phone number</p> -->
-        <input required class="input-item" type="phone-number" name="phone number" placeholder="Phone number">
-    </div>
-    <div>
-        <!-- <p class="input-label">Password</p> -->
-        <input required class="input-item" type="password" name="password" placeholder="Password">
-    </div>
-    <div>
-        <!-- <p class="input-label">Confirm password</p> -->
-        <input required class="input-item" type="password" name="password" placeholder="Confirm password">
-    </div>
-
-    <div>
-        <p class="input-label">Gender:</p>
-        <input required type="radio" name="sex">Male</input>
-        <input required type="radio" name="sex">Female</input>
-        <input required type="radio" name="sex">Other</input>
-    </div>
-    <div>
-        <p class="input-label">Security Question:</p>
-        <select required class="input-item" name="security-question">
-        <option value="first-pet-name">What was your first pet name</option>
-        <option value="first-job">What was your first job</option>
-        <option value="nickname">What is your nickname</option>
-        </select>
-    </div>
-    <div>
-        <textarea required class="input-item" maxlength="182" name="answer" id="" cols="23" rows="5"></textarea>
-    </div>
-    <div>
-        <input required id="terms-check" type="checkbox" name="terms-condition" value="accept"> I agree to accept terms and conditions
-    </div>
-    <div>
-        <button id="submit-btn">Register</button>
-        <script type="text/Javascript">
-            alert("Successfully submitted");
-        </script>
-    </div>
-</form>
-    
+   <h2>Program to stop form refreshing page on submit in JavaScript using <i>event.preventDefault()</i></h2>
+   <form id="formId">
+      Name: <input type="text" name="name" required/><br><br> Email: <input type="email" name="email" required/><br><br>
+      <input type="submit" value="Submit!" />
+   </form>
+   <p id="opTag"></p>
+   <script>
+      var form = document.getElementById("formId");
+      var opTag = document.getElementById("opTag");
+      function submitForm(event) {
+         event.preventDefault();
+         form.style.display = "none";
+         opTag.innerHTML = "<b>Form submit successful</b>";
+      }
+      form.addEventListener('submit', submitForm);
+   </script>
 </body>
 </html>

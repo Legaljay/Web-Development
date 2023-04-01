@@ -639,6 +639,7 @@
           dots[slideIndex-1].className += " active";
         }
     </script>
+    
 
 </head>
 <body>
@@ -871,13 +872,15 @@
                         <span style="display: flex; flex-wrap: wrap;">
                             <h1 style="font-size: 12px;">Subscribe to keep up with the latest news</h1>
                         </span>
-                        <form>
+                        <form id="formId">
                             <input required class="input-item" type="email" name="email" placeholder="Email Address">
-                            <button id="submit-btn">Register</button>
-                            <script type="text/Javascript">
+                            <!-- <button id="submit-btn">Register</button> -->
+                            <input  id="submit-btn" type="submit" value="Register" />
+                            <!-- <script type="text/Javascript">
                                 alert("Successfully submitted");
-                            </script>
+                            </script> -->
                         </form>
+                        <p id="opTag"></p>
                     </div>
 
                 </div>
@@ -891,3 +894,13 @@
     </div>
 </body>
 </html>
+ <script>
+    var form = document.getElementById("formId");
+    var opTag = document.getElementById("opTag");
+    function submitForm(event) {
+       event.preventDefault();
+       form.style.display = "none";
+       opTag.innerHTML = "<b>Thanks for subscribing</b>";
+    }
+    form.addEventListener('submit', submitForm);
+ </script>
