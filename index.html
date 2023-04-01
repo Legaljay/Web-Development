@@ -127,7 +127,7 @@
         .overlay {
         position: absolute; 
         background: #273248;
-        opacity: 0.8;
+        opacity: 0.92;
 
         /* center overlay text */
         display: flex;
@@ -836,6 +836,10 @@
                 </div>
             
             <div id="contact-us">
+                <div style="position: relative; top: 63.3vh; z-index: 2; height: auto; background-color: #fc7643;">
+                    <p style="color: white; font-family: serif; font-size: 14px; margin: auto; padding: 20px;">@2022 interior. All rights reserved. Created by Legal</p>
+                </div>
+            <div>
                 <div style="position: relative; left: 0;">
                     <img style="width: 50%;height: 63.3vh;float: left;" src="images\pexels-houzlook-com-3797991.jpg" alt="pexels-houzlook-com-3797991">
                     <div class="overlay overlayText-half">
@@ -843,9 +847,9 @@
                             <h2 style="font-family: 'Times New Roman'; font-size: 26px; color: white;">aliquip ex ea commodo consequat duis aute !</h2>
                             <h2 style="color:white; font-size: 10px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eligendi voluptates beatae, enim placeat reprehenderit.</h2>
                         </span>
-                        <div class="overlay1 overlayBottom">
+                        <!-- <div class="overlay1 overlayBottom">
                             <p style="color: white; font-family: serif; font-size: 14px;">@2022 interior. All rights reserved. Created by Legal</p>
-                        </div>
+                        </div> -->
                     </div>
                     
                 </div>
@@ -861,26 +865,27 @@
                 <div class="overlay overlayText-right">
                     <div class="position">
                         <span style="display: block">
-                                        <h2 style>Meubles</h2>
-                                        <p>GET IN TOUCH</p>
+                            <h2 style>Meubles</h2>
+                            <p>GET IN TOUCH</p>
                         </span>
-                        <span style="display: inline-block;">
-                            <h1 style="font-size: 12px;">Subscribe to keep up with
-                                the latest news</h1>
-                        <input required class="input-item" type="email" name="email" placeholder="Email Address">
-                        <button id="submit-btn">Register</button>
-                        <script type="text/Javascript">
-                            alert("Successfully submitted");
-                        </script>
+                        <span style="display: flex; flex-wrap: wrap;">
+                            <h1 style="font-size: 12px;">Subscribe to keep up with the latest news</h1>
                         </span>
+                        <form>
+                            <input required class="input-item" type="email" name="email" placeholder="Email Address">
+                            <button id="submit-btn">Register</button>
+                            <script type="text/Javascript">
+                                alert("Successfully submitted");
+                            </script>
+                        </form>
                     </div>
 
                 </div>
             </div>
+            </div>
             
     
-        </div>
-            
+        </div> 
         
             
     </div>
