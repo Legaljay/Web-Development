@@ -24,7 +24,7 @@
         /* Split the screen in half */
         .split {
         height: 480px;
-        width: 50%;
+        width: 100%;
         position: absolute;
         z-index: 1;
         top: 0;
@@ -32,14 +32,13 @@
         padding-top: 20px;
         }
         /* Control the left side */
-        .left {
+        /* .left {
         left: 0;
         background-color: white;
-        }
+        } */
 
         /* Control the right side */
         .right {
-        right: 0;
         background-color: whitesmoke;
         padding: 50px;
         }
@@ -786,7 +785,7 @@
                 </div>
             </div>
             <div class="">
-                    <div style="display: flex; justify-content: center;align-items: center;">
+                    <div style="display: inline-block; justify-content: center;align-items: left;">
                         <img  style="height: 360px; width: 300px; border: white solid 5px; border-radius: 20px;" src="images\Beige.png" alt="Beige">
                         <img style="height: 300px; width: 250px; border: white solid 5px; border-radius: 20px;" src="images\Round.png" alt="Round">
                     </div>
@@ -810,7 +809,7 @@
                 <button class="parallelogram"><a style="text-decoration: none; color:white" href="#Project">View all projects</a></button>
             </div>
         </div>
-        <div style="background: red; height: 40vh;" class="row3">
+        <div style="background: red;" class="row3">
 
                 
                         <div class="column3">
@@ -1027,3 +1026,78 @@
 </div>
 </body>
 </html>
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+.section1 {
+	margin: 0; padding: 0: width: 100%; background: yellow;
+}
+
+<div class="work-process">
+    <h2>" Our work process make your dream true</h2> <h4>Read more..</h4>
+    <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum.</span><span class="text-border">Lorem ipsum dolor sit amet.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
+    <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
+    <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span>
+</div>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         .container {
-
+            position: relative;
         }
         .container1 {
             position: relative;
@@ -29,56 +29,25 @@
         /* Split the screen in half */
         .split {
         height: 480px;
-        width: 50%;
-        position: absolute;
-        z-index: 1;
-        top: 830px;
-        overflow-x: hidden;
-        padding-top: 20px;
-        }
-        /* Control the left side */
-        .left {
-        left: 0;
-        background-color: white;
+        width: 100%;
+        /* overflow-x: hidden; */
         }
 
         /* Control the right side */
         .right {
+        left: 0;
         right: 0;
         background-color: whitesmoke;
+        overflow: scroll;
         padding: 50px;
         }
-
-        /* .split-left {
-            position: absolute;
-            top: 800; 
-            bottom: -280px;
-            right: 0px;
-            background-color: whitesmoke;
-            width: 900px;
-            height: 300px;
-            padding: 30px;
-            overflow-x: scroll;
-        }
-        .split-right {
-            position: absolute;
-            bottom: -220px;
-            left: 10px;
-            background-color: red;
-            width: 1200px;
-        } */
         .container3 {
-            position: relative;
             text-align: center;
             /* color: ; */
         }
         #Services {
-            position: absolute; 
-            top: 1230px; 
-            background-color: #273248; 
             height: 160px;
             width: 100%;
-            left: 0;
         }
         * {
             box-sizing: border-box;
@@ -86,7 +55,12 @@
         body {
         margin: 0;
         font-family: Arial;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
+        }
+        .header {
+        text-align: center;
+        padding: 32px;
+        background-color: #273248;
         }
 
         .row {
@@ -103,8 +77,7 @@
         flex: 25%;
         max-width: 25%;
         padding: 0 4px;
-        position: relative;
-        top: 1200px;
+        
         }
 
         .column img {
@@ -132,10 +105,6 @@
         }
         .work-process {
             background-color: white;
-            position: relative;
-            top: 1230px;
-            left: 1px;
-            overflow-y: hidden;
         }
         .text-border {
             display: inline-block;
@@ -144,9 +113,8 @@
             margin-bottom: 10px;
         }
         #shop {
-            background-color: white;
             position: relative;
-            top: 1300px;
+            background-color: white;
             /* bottom: ;
             height: ; */
             width: 100%;
@@ -173,13 +141,6 @@
         bottom: 0;
         }
         .overlay_3 {
-            top: 1250px;
-            /* right: 0; */
-            left: 0;
-            right: 0;
-            z-index: 2;
-            background-color: #fc7643;
-            overflow-wrap: break-word;
             
         }
         .showcase {
@@ -193,25 +154,19 @@
         .adv {
             position: relative;
             display: inline-block;
-            padding: 14px;
+            padding: 10px;
             margin-left: 0px;
             color: white;
             font-family: Arial;
-            font-size: 28px;
+            font-size: 25px;
             text-align: center;
             white-space: pre-line;
         }
 
-         /* body {
-            background-color: #f1f1f1;
-            padding: 20px;
-            font-family: Arial;
-        } */
-
         /* Center website */
         .main {
-        max-width: 1000px;
-        margin: auto;
+        max-width: 100%;
+        margin: 0;
         }
 
         h1 {
@@ -272,8 +227,6 @@
         color: white;
         }
         #contact-us {
-            position: absolute;
-            bottom: -3150px;
             width: 100%;
             height: 600px;
             background-color: #273248;
@@ -285,65 +238,14 @@
             margin-top: 0px;
             width: 100%;
             max-height: 800px;*/
-           
-            position: absolute;
             width: 100%;
             top: 0;
-            z-index: 0; 
         } 
 
-        #Nav-bar1 {
+        /* #Nav-bar1 {
             display: flexbox;
             margin-top: -10px;
-        }
-        /* .Nav-bar1-elements { 
-            display: flexbox;
-            margin-top: -30px;
-            margin-left: 50px;
-            padding-right: auto;
-            padding-left: auto;
-            color: white;
-            position: relative;
-            top: -28px;
-        } */
-        /* .Nav-bar1-Logo {
-            display: inline-flex;
-            margin-top: -90px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 2px;
-            font-size: 24px;
-            font-family: Verdana;
-            color: white;
-            position: relative;
-            top: -30px;
-            z-index: ;
-        } */
-        /* .Nav-bar1-element {
-            display: flex;
-            padding: 10px;
-            margin-left: 5px;
-            margin-top: -40px;
-            margin-right: 100px;
-            font-family: Verdana;
-            color: white;
-            position: relative;
-            top: -2px;
-            /* float: right; 
-        }
 
-        /* #Nav-bar2 {
-            display: flex;
-        } */
-        /* .Nav-bar2-elements {
-            display: flex;
-            padding: 10px 10px 10px 10px;
-            margin-top: -15px;
-            margin-left: 50px;
-            font-size: 19px;
-            color: white;
-            position: relative;
-            top: -35px;
         } */
         
         .parallelogram {
@@ -364,44 +266,30 @@
 
         .trapezoid1 {
             border-top: 80px solid #fc7643;
-	        border-left: 25px solid transparent;
-	        border-right: 25px solid transparent;
+	        /* border-left: 25px solid transparent;
+	        border-right: 25px solid transparent; */
 	        height: 3px;
-	        width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            z-index: 1;
+	        width: 100%;
             position: relative;
-        }
-        .trapezoid2 {
-            border-top: 60px solid #273248;
-	        border-left: 25px solid transparent;
-	        border-right: 25px solid transparent;
-	        height: 0;
-	        width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 2;
-            
         }
 
-        #Nav-bar2 {
-            display: flex;
-            min-width: 0;
-        }
-        .Nav-bar2-elements {
-            display: inline-block;
-            padding: 7px 0px 7px 0px;
-            /* margin-top: -15px; */
-            margin-left: auto;
-            margin-right: auto;
+        .design-text {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 12px;
+            padding-right: 12px;
             font-size: 14px;
-            /* background-color: ; */
+            margin: 12px;
             color: white;
-            /* position: relative; */
-            /* top: -40px; */
+            text-align: center;
             text-decoration: none;
+            justify-content: center;
+        } 
+
+        .design-text:hover {
+            color: #273248;
+        /* text-decoration: underline; */
+        background-color: #fc7643;
         }
 
         .text { 
@@ -413,31 +301,14 @@
             color: #fc7643;
         }
 
-        .design-text {
-            position: relative;
-            top: -30px;
-            padding: 7px;
-            margin: 2.2rem;
-            display: inline;
-            color: white;
-            text-align: center;
-        } 
-
-        .design-text:hover {
-            color: #273248;
-        /* text-decoration: underline; */
-        background-color: #fc7643;
-        }
-
         #About {
+            margin-top: 0;
+            padding: 2px;
             text-align: center;
             color: #fc7643;
         }
 
         .overlayHr {
-        /* position: absolute; 
-        background: #273248;
-        opacity: 0.8; */
 
         /* center overlay text */
         display: flex;
@@ -454,8 +325,7 @@
 
         .overlay1 {
         position: absolute; 
-        background: #273248;
-        opacity: 1;
+        opacity: 0.9;
 
         /* center overlay text  */
         display: flex;
@@ -483,31 +353,33 @@
             right:;
         }
 
-        @media screen and (max-width: 870px) {
+        /* @media screen and (max-width: 870px) {
                 .overlaytext .center .trapezoid2 .trapezoid1
                 {
                     float: none;
                     display: block;
                     text-align: left;
                 }
-            }
+            } */
         .overlayText-half {
             left: 0;
+            bottom:0;
+            top:0;
             width: 50%;
-            height: 65vh;
+            height: 63.3vh;
         }
 
         .overlayText-right{
             right: 0;
             width: 50%;
-            height: 65vh;
+            height: 63.3vh;
         }
 
         .overlayBottom {
             left: 0;
             bottom: 0;
-            width: 50%;
-            height: 5vh;
+            width: 100%;
+            height: 40px;
             background:#fc7643;
         }
 
@@ -541,7 +413,7 @@
         margin-bottom: 3px;
         border: 0;
         border-radius: 10px;
-        border-bottom: 1px solid #0056ff;
+        border-bottom: 1px solid #fc7643;
         resize: none;
         line-height: 160%;
         width: 70%;
@@ -580,16 +452,18 @@
 
         }
 
-        .overlayBottomR {
+        /* .overlayBottomR {
             bottom: 0;
             width: 100%;
             height: 5vh;
-        }
+        } */
 
-        /* Slideshow container */
+
+        /* Slideshow container*/
         .slideshow-container {
         position: relative;
         background: whitesmoke;
+
         }
 
         /* Slides */
@@ -665,20 +539,28 @@
         q {font-style: italic;}
 
         /* Add a blue color to the author */
-        .author {color: cornflowerblue;}
+        .author {color: cornflowerblue;} */
 
-        /* .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-        float: left;
-        } */
-        
-        /* .images2 {
-            height: 45%; 
-            width: 50vh; 
-            border: white solid 4px;
-        } */
+        .topnav {
+            overflow: hidden;
+            background-color: #273248;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            background-color: #273248;
+        }
+
+        .topnav a:hover {
+            background-color: #fc7643;
+            color: white;
+        }
+
 
     </style>
     <script>
@@ -761,42 +643,24 @@
 
 </head>
 <body>
-    <!-- <div id="header" class='button-holder'>
-        <h2 id="header" class="company-name">meubles</h2>
-        <input id="search-text-input" type="text" name="search" placeholder="Search">
-    </div> -->
     <div class="container">
-        <div id="Nav-bar1" class="trapezoid1 overlayHr">
+        <div class="trapezoid1 overlayHr">
             <h1 style="position: relative;top: -34px;display: inline-block; color:white; font-family: Arial; font-size: 35px;">Meubles</h1>
-            <!-- <div class="Nav-bar1-element"> -->
-                <!-- <select required class="input-item" name="EN"> -->
-                    <!-- <option value="francais">Fran</option> -->
-                    <!-- <option value="Spanish">Span</option> -->
-                    <!-- <option value="Yoruba">Yor</option> -->
-                    <!-- <option value="Igbo">Oginni</option> -->
-                <!-- </select> -->
-            <!-- </div> -->
-            <!-- <div class="Nav-bar1-element"> -->
-                <!-- <select required class="input-item" name="USD"> -->
-                    <!-- <option value="Pounds">Pds</option> -->
-                    <!-- <option value="Euro">Eur</option> -->
-                    <!-- <option value="Naira">NGN</option> -->
-                </select>
-            <!-- </div> -->
         </div>
-        <div class="trapezoid2">
-            <div id="Nav-bar2 overlayHr" >
-                <!-- <ul style="position: relative; margin-left: -9%;" class="overlayHr"> -->
-                <a href="#Home" class="Nav-bar2-elements design-text">Home</a>
-                <a href="#About" class="Nav-bar2-elements design-text">About</a>
-                <a href="#Services" class="Nav-bar2-elements design-text">Services</a>
-                <a href="#Project" class="Nav-bar2-elements design-text">Projects</a>
-                <a href="#contact-us" class="Nav-bar2-elements design-text">Contact Us</a>
-                <a href="#Blog" class="Nav-bar2-elements design-text">Blog</a>
-                <a href="#Shop" class="Nav-bar2-elements design-text">Shop</a>
-                
-            </div>
-        </div>
+        
+        
+        <div  class="topnav">
+                <a href="#Home" class="design-text">Home</a>
+                <a href="#About" class="design-text">About</a>
+                <a href="#Services" class="design-text">Services</a>
+                <a href="#Project" class="design-text">Projects</a>
+                <a href="#contact-us" class="design-text">Contact Us</a>
+                <a href="#Blog" class="design-text">Blog</a>
+                <a href="#Shop" class="design-text">Shop</a>
+                <input style="font-size: 14px; padding-top: 10px; padding-bottom: 10px; margin-top:12px; margin-left: 30px; border: 0; border-radius: 3px; border-bottom: 4px solid #fc7643; resize: none; line-height: 160%; width: 30%; color: black;" type="search" name="search" placeholder="Search..">
+        </div>  
+            
+    
         <div class="top-section">
             <img  style="height:800px; width:100%;" src="images\pexels-vecislavas-popa-1571469.jpg" alt="parametric bench">
             <!-- <div class="overlaytext center-text">
@@ -808,57 +672,199 @@
                 <button class="parallelogram"><a style="text-decoration: none; color: white;" href=#About>MORE</a></button>
                 </pre>
             </div> -->
-            <div class="bottom-right">
+            <!-- <div class="bottom-right">
                 <div style="display: inline-block;">
                     <button class="parallelogram"><a style="text-decoration: none; color: white;" href="">PREV</a></button>
                     <button class="parallelogram"><a  style="text-decoration: none; color: white;" href="">NEXT</a></button>
-                </div>
-            </div>
-            <div class="split left">
-                    <div style="display: flex; justify-content: center;align-items: center;">
-                        <img  style="height: 360px; width: 300px; border: white solid 5px; border-radius: 20px;" src="images\Beige.png" alt="Beige">
-                        <img style="height: 300px; width: 250px; border: white solid 5px; border-radius: 20px;" src="images\Round.png" alt="Round">
-                    </div>
-                    <!-- <div style="display: flex; top: 8px; left: 10px; justify-content: right;border: white solid 8px;" >
-                        <img style="height: 300px; width: 250px;" src="images\Round.png" alt="Round">
-                    </div> -->
+                </div> -->
             </div>
             <div class="split right">
                 <h2 id="About">" About us</h2>
-                <p style="font-size: 13px; font-family: 'Times New Roman'; text-align: justify;">Furniture is a crucial aspect of every space. When it comes to choosing furniture for your space, you want something that's not only functional but also adds to the aesthetic appeal of your room. That's where our furniture company comes in - we provide high-quality, durable, and stylish furniture for every taste and budget.
+                    <img style="height: 200px; width: 250px; border: white solid 5px; border-radius: 20px; float:left; margin: 0;" src="images\Round.png" alt="Round">
+                <p style="font-size: 11px; font-family: 'Times New Roman'; text-align: justify; line-height: 230%;">We provide high-quality, durable, and stylish furniture for every taste and budget.
                 Our furniture company is a leading provider of exceptional furniture for all kinds of settings. We offer a wide range of furniture options, from sofas, chairs, tables, cabinets, and many more. Our team of experienced and creative designers work tirelessly to ensure that our furniture pieces are not only functional but also appealing to the eye. We understand that furniture is a reflection of your personality and style, and that's why we offer a broad range of options that cater to different tastes.
-                We pride ourselves on using the finest materials to create furniture pieces that stand the test of time. Our craftsmen have a wealth of experience in furniture making, and their attention to detail is unrivaled. We understand that quality is essential, and that's why we don't compromise on it. From selecting the right materials to ensuring that every piece is well-crafted, we take every step necessary to produce furniture pieces that exceed our clients' expectation. Whether you're looking for something traditional or modern, we've got you covered. From customized options to high-quality materials, our furniture pieces are the perfect addition to any space. So, if you're looking for furniture that's not only functional but also stylish, come visit us today, and let's transform your space into something extraordinary!</p>
-                <button class="parallelogram">MORE</button>
+                We pride ourselves on using the finest materials to create furniture pieces that stand the test of time. So, if you're looking for furniture that's not only functional but also stylish, come visit us today, and let's transform your space into something extraordinary!</p>
+                <!-- <button class="parallelogram">MORE</button> -->
             </div>
         </div>
        
         <div class="container3">
-            <div style="height: 200px; width: 100%;">
-                <span id="Services">
+                <!-- <span id="Services">
                     <h2 style="color:white">" Services we do</h2>
                     <button class="parallelogram"><a style="text-decoration: none; color:white" href="#Project">View all projects</a></button>
-                </span>
-                <div style="width:100%; height: 100px; position:absolute; bottom: -2200px;left: 0;right: 0; background-color: #273248;">
+                </span> -->
+                <div class="header">
+                    <h2 style="color:white">" Services we do</h2>
+                    <p>Resize the browser window to see the responsive effect.</p>
+                </div>
+                <div class="row"> 
+                    <div class="column">
+                        <img src="images\Beige.png" style="width:100%">
+                        <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
+                        <!-- <img src="images\parametric bench.jpg" style="width:100%"> -->
+                        <!-- <img src="images\pexels-athena-2180883.jpg" style="width:100%">
+                        <img src="images\pexels-designecologist-1008692.jpg" style="width:100%">
+                        <img src="images\pexels-dmitry-zvolskiy-1544420.jpg" style="width:100%">
+                        <img src="images\pexels-dominika-roseclay-1110562.jpg" style="width:100%">
+                        <img src="images\pexels-donald-tong-189295.jpg" style="width:100%"> -->
+                    </div>
+                    <div class="column">
+                        <img src="images\pexels-donald-tong-189333.jpg" style="width:100%">
+                        <img src="images\pexels-element-digital-1125137.jpg" style="width:100%">
+                        <!-- <img src="images\pexels-houzlook-com-3797991.jpg" style="width:100%">
+                        <img src="images\pexels-igor-starkov-914388.jpg" style="width:100%">
+                        <img src="images\pexels-juan-pablo-serrano-arenas-967016.jpg" style="width:100%">
+                        <img src="images\pexels-ken-tomita-389819.jpg" style="width:100%"> -->
+                    </div>  
+                    <div class="column">
+                        <img src="images\pexels-kevin-menajang-982614.jpg" style="width:100%">
+                        <img src="images\pexels-lisa-fotios-1957478.jpg" style="width:100%">
+                        <!-- <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
+                        <img src="images\pexels-mike-b-116910.jpg" style="width:100%">
+                        <img src="images\pexels-mike-b-130987.jpg" style="width:100%">
+                        <img src="images\pexels-photo-4352247.jpeg" style="width:100%">
+                        <img src="images\pexels-pixabay-259580.jpg" style="width:100%"> -->
+                    </div>
+                    <div class="column">
+                        <img src="images\pexels-terje-sollie-298842.jpg" style="width:100%">
+                        <img src="images\pexels-tiana-2995012.jpg" style="width:100%">
+                        <!-- <img src="images\pexels-vecislavas-popa-1571463.jpg" style="width:100%">
+                        <img src="images\pexels-vecislavas-popa-1571468.jpg" style="width:100%">
+                        <img src="images\pexels-vecislavas-popa-1571469.jpg" style="width:100%">
+                        <img src="images\pexels-vecislavas-popa-1669799.jpg" style="width:100%"> -->
+                    </div>
+                </div>
+                <div class="work-process">
+                    <h2>" Our work process make your dream true</h2> <h4>Read more..</h4>
+                    <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum.</span><span class="text-border">Lorem ipsum dolor sit amet.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
+                    <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
+                    <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span>
+                </div>
+                <div>
+                    <div id="shop">
+                        <img class="back-images" src="images\pexels-jean-van-der-meulen-1457843.jpg" alt="Pipe">
+                        <div class="overlay overlay_2">
+                            <h2 style="font-family: 'Times New Roman'; font-size: 26px;">Luxury interior design !</h2>
+                        </div>
+                    </div>
+                </div>
+                    <div class="main">
+                        <div>
+                            <div class="showcase overlay_3">
+                                <div class="overlayHr">
+                                <span class="adv">16 + <pre><h6 style="font-size: 10px;">Years of experience</h6></pre></span>
+                                <span class="adv">352 + <pre><h6 style="font-size: 10px;">Project completed</h6></pre></span>
+                                <span class="adv">74 + <pre><h6 style="font-size: 10px;">Excellent team</h6></pre></span>
+                                <span class="adv">98 + <pre><h6 style="font-size: 10px;">Our happy clients</h6></pre></span>
+                            </div>
+                        </div>    
+                                
+                        <div style="background-color: white; height: 70px; width: 100%;">
+                            <h2 id="Project">" Latest Project</h2>
+                        </div>
+                        <div id="myBtnContainer">
+                            <button class="btn active" onclick="filterSelection('all')"> View all</button>
+                            <button class="btn" onclick="filterSelection('nature')"> Contemporary</button>
+                            <button class="btn" onclick="filterSelection('cars')"> Classic</button>
+                            <button class="btn" onclick="filterSelection('people')"> Mixed</button>
+                        </div>
+                            <!-- Portfolio Gallery Grid -->
+                            <div class="row1" style="padding: 10px">
+                                <div class="column1 nature">
+                                    <div class="content">
+                                        <img src="images\pexels-vecislavas-popa-1669799.jpg" alt="Mountains" style="width:100%">
+                                        <h4>Mountains</h4>
+                                    </div>
+                                </div>
+                                <div class="column1 nature">
+                                    <div class="content">
+                                        <img src="images\pexels-vecislavas-popa-1571469.jpg" alt="Lights" style="width:100%">
+                                        <h4>Lights</h4>
+                                    </div>
+                                </div>
+                                <div class="column1 nature">
+                                    <div class="content">
+                                        <img src="images\pexels-vecislavas-popa-1571468.jpg" alt="Nature" style="width:100%">
+                                        <h4>Forest</h4>
+                                    </div>
+                                </div>
+                                <div class="column1 cars">
+                                    <div class="content">
+                                        <img src="images\pexels-vecislavas-popa-1571463.jpg" alt="Car" style="width:100%">
+                                        <h4>Retro</h4>
+                                    </div>
+                                </div>
+                                <div class="column1 cars">
+                                    <div class="content">
+                                        <img src="images\pexels-pixabay-259580.jpg" alt="Car" style="width:100%">
+                                        <h4>Fast</h4>
+                                    </div>
+                                </div>
+                                <!-- END GRID-->
+                                    
+                            </div>
+                        </div>
+                    </div>  
+                <div style="width:100%; height: 100px;background-color: #273248;">
                     <label style="color: whitesmoke;"><h2>" Our Clients</h2></label>
-            </div>
+                </div>
+                <div style="background-color: whitesmoke; width: 100%;">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+    
+                        <!-- Full-width slides/quotes -->
+                        <div class="mySlides">
+                        <q>I love the way the management relates well with me and were able to give me the best suit my budget.</q>
+                        <p class="author">- John Olusola</p>
+                        </div>
+                    
+                        <div class="mySlides">
+                            <q>Top notch service with quality material in use. I've been using their products for 5 years now and no issue.</q>
+                            <p class="author">- Aremo O. Pipeloluwa</p>
+                        </div>
+                    
+                        <div class="mySlides">
+                            <q>I was at first their customer but now a redistributor for the company. Such a reliable company is hard to find these days.</q>
+                            <p class="author">- Faramade O. Isaac</p>
+                        </div>
+                    
+                        <!-- Next/prev buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    
+                    <!-- Dots/bullets/indicators -->
+                    <div class="dot-container">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
             
             <div id="contact-us">
-                <img style="width: 50%;height: 65vh;position: absolute; left: 0;" src="images\pexels-houzlook-com-3797991.jpg" alt="pexels-houzlook-com-3797991">
-                <div class="overlay overlayText-half">
-                    <span style="display: block;">
-                        <h2 style="font-family: 'Times New Roman'; font-size: 26px; color: white;">aliquip ex ea commodo consequat duis aute !</h2>
-                        <h2 style="color:white; font-size: 10px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eligendi voluptates beatae, enim placeat reprehenderit.</h2>
-                    </span>
+                <div style="position: relative; left: 0;">
+                    <img style="width: 50%;height: 50vh;float: left;" src="images\pexels-houzlook-com-3797991.jpg" alt="pexels-houzlook-com-3797991">
+                    <div class="overlay overlayText-half">
+                        <span style="display: block;">
+                            <h2 style="font-family: 'Times New Roman'; font-size: 26px; color: white;">aliquip ex ea commodo consequat duis aute !</h2>
+                            <h2 style="color:white; font-size: 10px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eligendi voluptates beatae, enim placeat reprehenderit.</h2>
+                        </span>
+                        <div class="overlay1 overlayBottom">
+                            <p style="color: white; font-family: serif; font-size: 14px;">@2022 interior. All rights reserved. Created by Legal</p>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="overlay1 overlayBottom">
+                <!-- <div class="overlay1 overlayBottom">
                     <p style="color: white; font-family: serif; font-size: 14px;">@2022 interior. All rights reserved. Created by Legal</p>
-                </div>
+                </div> -->
+                
                 <!-- <div style="position: absolute; left: 300px; color: white;">
                     <h1>Meubles</h1>
                     <p>Subscribe to keep up with the latest news</p>
                     <p>GET IN TOUCH</p>
                 </div> -->
-                <form class="overlay overlayText-right">
+                <div class="overlay overlayText-right">
                     <div class="position">
                         <span style="display: block">
                                         <h1 style>Meubles</h1>
@@ -876,153 +882,14 @@
                         </script>
                         </span>
                     </div>
-                    <div class="overlay2 overlayBottomR">
-                        <ul>
-                            <li class="design-text"><a href="#Home" class="Nav-bar2-elements">Home</a></li>
-                            <li class="design-text"><a href="#Project" class="Nav-bar2-elements">Projects</a></li>
-                            <li class="design-text"><a href="#About" class="Nav-bar2-elements">About Us</a></li>
-                            <li class="design-text"><a href="#Services" class="Nav-bar2-elements">Services</a></li>
-                            <li class="design-text"><a href="#Blog" class="Nav-bar2-elements">Blog</a></li>
-                            <li class="design-text"><a href="#Shop" class="Nav-bar2-elements">Shop</a></li>
-                            <li class="design-text"><a href="#contact-us" class="Nav-bar2-elements">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </form>
-            </div>
-            <div style="position:absolute; bottom: -2540px;background-color: whitesmoke; width: 100%;height: 330px;">
-                <!-- Slideshow container -->
-                <div class="slideshow-container">
 
-                    <!-- Full-width slides/quotes -->
-                    <div class="mySlides">
-                    <q>I love the way the management relates well with me and were able to give me the best suit my budget.</q>
-                    <p class="author">- John Olusola</p>
-                    </div>
-                
-                    <div class="mySlides">
-                        <q>Top notch service with quality material in use. I've been using their products for 5 years now and no issue.</q>
-                        <p class="author">- Aremo O. Pipeloluwa</p>
-                    </div>
-                
-                    <div class="mySlides">
-                        <q>I was at first their customer but now a redistributor for the company. Such a reliable company is hard to find these days.</q>
-                        <p class="author">- Faramade O. Isaac</p>
-                    </div>
-                
-                    <!-- Next/prev buttons -->
-                    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                
-                <!-- Dots/bullets/indicators -->
-                <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
+            
     
         </div>
-            <div class="row"> 
-                <div class="column">
-                    <img src="images\Beige.png" style="width:100%">
-                    <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
-                    <!-- <img src="images\parametric bench.jpg" style="width:100%"> -->
-                    <!-- <img src="images\pexels-athena-2180883.jpg" style="width:100%">
-                    <img src="images\pexels-designecologist-1008692.jpg" style="width:100%">
-                    <img src="images\pexels-dmitry-zvolskiy-1544420.jpg" style="width:100%">
-                    <img src="images\pexels-dominika-roseclay-1110562.jpg" style="width:100%">
-                    <img src="images\pexels-donald-tong-189295.jpg" style="width:100%"> -->
-                </div>
-                <div class="column">
-                    <img src="images\pexels-donald-tong-189333.jpg" style="width:100%">
-                    <img src="images\pexels-element-digital-1125137.jpg" style="width:100%">
-                    <!-- <img src="images\pexels-houzlook-com-3797991.jpg" style="width:100%">
-                    <img src="images\pexels-igor-starkov-914388.jpg" style="width:100%">
-                    <img src="images\pexels-juan-pablo-serrano-arenas-967016.jpg" style="width:100%">
-                    <img src="images\pexels-ken-tomita-389819.jpg" style="width:100%"> -->
-                </div>  
-                <div class="column">
-                    <img src="images\pexels-kevin-menajang-982614.jpg" style="width:100%">
-                    <img src="images\pexels-lisa-fotios-1957478.jpg" style="width:100%">
-                    <!-- <img src="images\pexels-mali-maeder-112474.jpg" style="width:100%">
-                    <img src="images\pexels-mike-b-116910.jpg" style="width:100%">
-                    <img src="images\pexels-mike-b-130987.jpg" style="width:100%">
-                    <img src="images\pexels-photo-4352247.jpeg" style="width:100%">
-                    <img src="images\pexels-pixabay-259580.jpg" style="width:100%"> -->
-                </div>
-                <div class="column">
-                    <img src="images\pexels-terje-sollie-298842.jpg" style="width:100%">
-                    <img src="images\pexels-tiana-2995012.jpg" style="width:100%">
-                    <!-- <img src="images\pexels-vecislavas-popa-1571463.jpg" style="width:100%">
-                    <img src="images\pexels-vecislavas-popa-1571468.jpg" style="width:100%">
-                    <img src="images\pexels-vecislavas-popa-1571469.jpg" style="width:100%">
-                    <img src="images\pexels-vecislavas-popa-1669799.jpg" style="width:100%"> -->
-                </div>
-            </div>
-            <div class="work-process">
-                <h2>" Our work process make your dream true</h2> <h4>Read more..</h4>
-                <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum.</span><span class="text-border">Lorem ipsum dolor sit amet.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
-                <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span>
-                <span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem, ipsum dolor.</span><span class="text-border">Lorem ipsum dolor sit amet consectetur.</span><span class="text-border">Lorem ipsum dolor sit.</span>
-            </div>
-            <div id="shop">
-                <img class="back-images" src="images\pexels-jean-van-der-meulen-1457843.jpg" alt="Pipe">
-                <div class="overlay overlay_2">
-                    <h2 style="font-family: 'Times New Roman'; font-size: 26px;">Luxury interior design !</h2>
-                </div>
-            </div>
-        <div>
-            <div class="showcase overlay_3">
-                <div class="overlayHr">
-                <span class="adv">16 + <pre><h6 style="font-size: 10px;">Years of experience</h6></pre></span>
-                <span class="adv">352 + <pre><h6 style="font-size: 10px;">Project completed</h6></pre></span>
-                <span class="adv">74 + <pre><h6 style="font-size: 10px;">Excellent team</h6></pre></span>
-                <span class="adv">98 + <pre><h6 style="font-size: 10px;">Our happy clients</h6></pre></span>
-                </div>
-                <div style="background-color: white; height: 70px; width: 100%; position: absolute; top: 90px;">
-                    <h2 id="Project">" Latest Project</h2>
-                <div id="myBtnContainer">
-                    <button class="btn active" onclick="filterSelection('all')"> View all</button>
-                    <button class="btn" onclick="filterSelection('nature')"> Contemporary</button>
-                    <button class="btn" onclick="filterSelection('cars')"> Classic</button>
-                    <button class="btn" onclick="filterSelection('people')"> Mixed</button>
-                </div>
-                <!-- Portfolio Gallery Grid -->
-                <div class="row1" style="padding: 10px">
-                <div class="column1 nature">
-                    <div class="content">
-                        <img src="images\pexels-vecislavas-popa-1669799.jpg" alt="Mountains" style="width:100%">
-                        <h4>Mountains</h4>
-                    </div>
-                </div>
-                <div class="column1 nature">
-                    <div class="content">
-                        <img src="images\pexels-vecislavas-popa-1571469.jpg" alt="Lights" style="width:100%">
-                        <h4>Lights</h4>
-                    </div>
-                </div>
-                <div class="column1 nature">
-                    <div class="content">
-                        <img src="images\pexels-vecislavas-popa-1571468.jpg" alt="Nature" style="width:100%">
-                        <h4>Forest</h4>
-                    </div>
-                </div>
-                <div class="column1 cars">
-                    <div class="content">
-                        <img src="images\pexels-vecislavas-popa-1571463.jpg" alt="Car" style="width:100%">
-                        <h4>Retro</h4>
-                    </div>
-                </div>
-                <div class="column1 cars">
-                    <div class="content">
-                        <img src="images\pexels-pixabay-259580.jpg" alt="Car" style="width:100%">
-                        <h4>Fast</h4>
-                    </div>
-                </div>
-                <!-- END GRID-->
-            </div>
-        </div>    
+            
+        
             
     </div>
 </body>
