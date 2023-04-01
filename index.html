@@ -29,7 +29,7 @@
         /* Split the screen in half */
         .split {
         height: auto;
-        /* width: 100%; */
+        width: 100%;
         /* overflow-x: hidden; */
         }
 
@@ -45,10 +45,10 @@
             text-align: center;
             /* color: ; */
         }
-        #Services {
+        /* #Services {
             height: 160px;
-            width: 98.3%;
-        }
+            width: 100%;
+        } */
         * {
             box-sizing: border-box;
         }
@@ -56,7 +56,7 @@
         margin: 0;
         padding: 0;
         font-family: Arial;
-        overflow-x: hidden;
+        overflow-: hidden;
         }
         .header {
         text-align: center;
@@ -122,7 +122,7 @@
         }
         .back-images {
             height: 300px;
-            width: 100%;
+            max-width: 100%;
         }
         .overlay {
         position: absolute; 
@@ -143,7 +143,7 @@
         }
         .showcaseHR {
             height: 5px;
-            /* width: ; */
+            width: 100%;
             background-color: #fc7643;
             overflow-wrap: break-word;
             text-align: center;
@@ -154,7 +154,7 @@
             position: relative;
             /* display: flex; */
             height: auto;
-            /* width: ; */
+            width: 100%;
             background-color: #fc7643;
             overflow-wrap: break-word;
         }
@@ -233,7 +233,7 @@
         color: white;
         }
         #contact-us {
-            width: ;
+            width: 100%;
             height: auto;
             background-color: #273248;
         }
@@ -255,7 +255,7 @@
 
         } */
         
-        /* .parallelogram {
+        .parallelogram {
 	    width: 100px;
 	    height: 35px;
         border: 0;
@@ -263,13 +263,13 @@
 	    background: #fc7643;
         color: white;
         /* z-index: 2; */
-        } */
+        }
 
-        /* .parallelogram:hover {
+        .parallelogram:hover {
             color: #273248;
-        /* text-decoration: underline; 
+        /* text-decoration: underline; */
         background-color: orange;
-        } */
+        }
 
         .design-text {
             padding-top: 12px;
@@ -639,10 +639,11 @@
           dots[slideIndex-1].className += " active";
         }
     </script>
+    
 
 </head>
 <body>
-    <div class="container">
+    <div id="Home" class="container">
         <div style="background-color: #fc7643;">
             <h1 style="color:white; font-family: Arial, Helvetica, sans-serif; margin: auto; padding: 30px;">Meubles</h1>
         </div>
@@ -654,7 +655,7 @@
                 <a href="#Project" class="design-text">Projects</a>
                 <a href="#contact-us" class="design-text">Contact Us</a>
                 <a href="#Blog" class="design-text">Blog</a>
-                <a href="#Shop" class="design-text">Shop</a>
+                <a href="#shop" class="design-text">Shop</a>
                 <input style="font-size: 14px; padding-top: 10px; padding-bottom: 10px; margin-top:12px; margin-left: 30px; border: 0; border-radius: 3px; border-bottom: 4px solid #fc7643; resize: none; line-height: 160%; width: 30%; color: black;" type="search" name="search" placeholder="Search..">
         </div>  
             
@@ -687,7 +688,7 @@
                     <h2 style="color:white">" Services we do</h2>
                     <button class="parallelogram"><a style="text-decoration: none; color:white" href="#Project">View all projects</a></button>
                 </span> -->
-                <div class="header">
+                <div id="Services" class="header">
                     <h2 style="color:white">" Services we do</h2>
                     <p style="color: whitesmoke">Our craftsmen have a wealth of experience in furniture making, and their attention to detail is unrivaled. We understand that quality is essential, and that's why we don't compromise on it!</p>
                 </div>
@@ -763,7 +764,7 @@
                             <button class="btn" onclick="filterSelection('people')"> Mixed</button>
                         </div>
                             <!-- Portfolio Gallery Grid -->
-                            <div class="row1" style="padding: 10px">
+                            <div class="row1" style="margin: auto;">
                                 <div class="column1 nature">
                                     <div class="content">
                                         <img src="images\pexels-vecislavas-popa-1669799.jpg" alt="Mountains" style="width:100%">
@@ -802,7 +803,7 @@
                 <div style="width:100%; height: 60px; background-color: #273248;">
                     <h2 style="color: whitesmoke; padding-top: 13px;">" Our Clients</h2>
                 </div>
-                <div style="background-color: whitesmoke; width: 100%;">
+                <div id="Blog" style="background-color: whitesmoke; width: 100%;">
                     <!-- Slideshow container -->
                     <div class="slideshow-container">
     
@@ -841,7 +842,7 @@
                 </div>
             <div>
                 <div style="position: relative; left: 0;">
-                    <img style="width: 50%;height: 63.3vh;float: left;" src="images\pexels-houzlook-com-3797991.jpg" alt="pexels-houzlook-com-3797991">
+                    <img style="max-width: 50%;height: 63.3vh;float: left;" src="images\pexels-houzlook-com-3797991.jpg" alt="pexels-houzlook-com-3797991">
                     <div class="overlay overlayText-half">
                         <span style="display: block;">
                             <h2 style="font-family: 'Times New Roman'; font-size: 26px; color: white;">aliquip ex ea commodo consequat duis aute !</h2>
