@@ -56,7 +56,7 @@
         margin: 0;
         padding: 0;
         font-family: Arial;
-        overflow-: hidden;
+        /* overflow: hidden; */
         }
         .header {
         text-align: center;
@@ -560,89 +560,34 @@
             color: white;
         }
 
-
-    </style>
-    <script>
-        filterSelection("all") // Execute the function and show all columns
-        function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("column1");
-        if (c == "all") c = "";
-        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-        for (i = 0; i < x.length; i++) {
-            w3RemoveClass(x[i], "show");
-            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-        }
+        .image-container {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
         }
 
-        // Show filtered elements
-        function w3AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) {
-            element.className += " " + arr2[i];
-            }
+        .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+
+        @media (max-width: 768px) {
+        .image-container img {
+            max-height: 300px; /* Set the maximum height for the image on smaller screens */
         }
         }
 
-        // Hide elements that are not selected
-        function w3RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-            }
-        }
-        element.className = arr1.join(" ");
-        }
-
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function(){
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-        });
-        }
-    </script>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-    </script>
+    </style>
     
 
 </head>
-<body>
+<body onload=" online()">
+    <script type="application/JavaScript">
+        function online(){
+            window.alert("Welcome to Meubles")
+        }
+    </script>
     <div id="Home" class="container">
         <div style="background-color: #fc7643;">
             <h1 style="color:white; font-family: Arial, Helvetica, sans-serif; margin: auto; padding: 30px;">Meubles</h1>
@@ -661,17 +606,32 @@
             
     
         <div class="top-section">
-            <img  style="height:800px; width:100%;" src="images\pexels-vecislavas-popa-1571469.jpg" alt="parametric bench">
-            <!-- <div class="overlaytext center-text">
-                <pre><h4>
-                There are many variations
-                <span class="text">LOREM IPSUM
-        SIMPLY <span class="important">TEXT OF</span>
-        THE PRINTING</span></h4>
-                <button class="parallelogram"><a style="text-decoration: none; color: white;" href=#About>MORE</a></button>
-                </pre>
-            </div> -->
-
+            <div class="image-container">
+                <img src="images\pexels-vecislavas-popa-1571469.jpg" alt="parametric bench">
+                <!-- <div class="overlaytext center-text">
+                    <pre><h4>
+                    There are many variations
+                    <span class="text">LOREM IPSUM
+            SIMPLY <span class="important">TEXT OF</span>
+            THE PRINTING</span></h4>
+                    <button class="parallelogram"><a style="text-decoration: none; color: white;" href=#About>MORE</a></button>
+                    </pre>
+                </div> -->
+            </div>
+            <script>
+                window.addEventListener('resize', function() {
+                var imageHeight = document.querySelector('.image-container img').clientHeight;
+                var containerHeight = document.querySelector('.image-container').clientHeight;
+                
+                if (imageHeight > containerHeight) {
+                    var newHeight = containerHeight + 'px';
+                    document.querySelector('.image-container img').style.maxHeight = newHeight;
+                } else {
+                    document.querySelector('.image-container img').style.maxHeight = 'none';
+                }
+                });
+        
+            </script>
             </div>
             <div class="split right">
                 <h2 id="About">" About us</h2>
@@ -799,7 +759,56 @@
                                     
                             </div>
                         </div>
-                    </div>  
+                    </div> 
+                    <script>
+                        filterSelection("all") // Execute the function and show all columns
+                        function filterSelection(c) {
+                        var x, i;
+                        x = document.getElementsByClassName("column1");
+                        if (c == "all") c = "";
+                        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                        for (i = 0; i < x.length; i++) {
+                            w3RemoveClass(x[i], "show");
+                            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                        }
+                        }
+                
+                        // Show filtered elements
+                        function w3AddClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                            if (arr1.indexOf(arr2[i]) == -1) {
+                            element.className += " " + arr2[i];
+                            }
+                        }
+                        }
+                
+                        // Hide elements that are not selected
+                        function w3RemoveClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                            while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);
+                            }
+                        }
+                        element.className = arr1.join(" ");
+                        }
+                
+                        // Add active class to the current button (highlight it)
+                        var btnContainer = document.getElementById("myBtnContainer");
+                        var btns = btnContainer.getElementsByClassName("btn");
+                        for (var i = 0; i < btns.length; i++) {
+                        btns[i].addEventListener("click", function(){
+                            var current = document.getElementsByClassName("active");
+                            current[0].className = current[0].className.replace(" active", "");
+                            this.className += " active";
+                        });
+                        }
+                    </script> 
                 <div style="width:100%; height: 60px; background-color: #273248;">
                     <h2 style="color: whitesmoke; padding-top: 13px;">" Our Clients</h2>
                 </div>
@@ -835,6 +844,34 @@
                         <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                </script>
             
             <div id="contact-us">
                 <div style="position: relative; top: 63.3vh; z-index: 2; height: auto; background-color: #fc7643;">

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Increasing and Decreasing Image Size</title>
+<script>
+    // function zoomin(){
+    //     var myImg = document.getElementById("sky");
+    //     var currWidth = myImg.clientWidth;
+    //     if(currWidth == 500){
+    //         alert("Maximum zoom-in level reached.");
+    //     } else{
+    //         myImg.style.width = (currWidth + 50) + "px";
+    //     } 
+    // }
+    // function zoomout(){
+    //     var myImg = document.getElementById("sky");
+    //     var currWidth = myImg.clientWidth;
+    //     if(currWidth == 50){
+    //         alert("Maximum zoom-out level reached.");
+    //     } else{
+    //         myImg.style.width = (currWidth - 50) + "px";
+    //     }
+
+</script>
+<style>
+    .image-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .image-container img {
+    max-height: 300px; /* Set the maximum height for the image on smaller screens */
+  }
+}
+
+</style>
+</head>
+<body>
+    <!-- <p>
+        <button type="button" onclick="zoomin()">Zoom In</button>
+        <button type="button" onclick="zoomout()">Zoom Out</button>
+    </p>
+    <img  style="width: 100%; height: 800px;"  id="sky"  alt="Cloudy Sky"> -->
+
+    <div class="image-container">
+        <img src="images\wrinkles chair.png" alt="Your image description">
+    </div>
+    <script>
+        window.addEventListener('resize', function() {
+        var imageHeight = document.querySelector('.image-container img').clientHeight;
+        var containerHeight = document.querySelector('.image-container').clientHeight;
+        
+        if (imageHeight > containerHeight) {
+            var newHeight = containerHeight + 'px';
+            document.querySelector('.image-container img').style.maxHeight = newHeight;
+        } else {
+            document.querySelector('.image-container img').style.maxHeight = 'none';
+        }
+        });
+
+    </script>
+    <div style="height: 300px;width: 100%; background: yellowgreen;">
+        
+    </div>
+
+
+</body>
+</html>
+
+  
