@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* /* *** 
+Solution For Very Long Dropdown Menus originally posted on CSS-Tricks 07/15/2011: https://css-tricks.com/convert-menu-to-dropdown/
+*** 
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font: 300 21px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  width: 500px;
+  margin: 0 auto 15px;
+}
+
+nav {
+  display: block;
+  width: 960px;
+  margin: 100px auto;
+  text-align: center;
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 5px 15px;
+    border: 1px solid white;
+    text-decoration: none;
+    &:hover {
+      border: 1px solid red;
+      background: red;
+    }
+    &:active {
+      background: blue;
+    }
+  }
+  select {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  nav {
+    ul {
+      display: none;
+    }
+    select {
+      display: inline-block;
+    }
+  }
+} */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: '';
+    color: #fff !important;
+}
+select option {
+  color: #000 !important;
+}
+select::-ms-expand {
+    display: none;
+}
+
+
+.sectional-nav {
+  background-color: #202a35;
+}
+
+.sectional-nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  text-transform: uppercase;
+  margin-right: 12px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  padding: 15px 10px;
+}
+.sectional-nav ul li:first-of-type {
+  padding: 30px 10px;
+}
+.sectional-nav ul li:hover {
+  background-color: #0479c3;
+  cursor: pointer;
+  color: #fff;
+}
+.sectional-nav ul li a {
+  color: #fff;
+}
+.sectional-nav ul li:hover a {
+  color: #eeeeee;
+}
+
+
+@media screen and (max-width: 992px) {
+  .sectional-nav ul li {
+    font-size: 16px;  
+  }
+  .sectional-nav ul li {
+    padding: 20px 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sectional-nav #sectional_nav {
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#fff' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="sectional-nav clearBoth">
+        <div class="container">
+          <ul class="hidden-sm-down p-0 d-flex align-items-center justify-content-between">
+            <li><a href="https://www.solodev.com/pricing/">Pricing</a></li>
+            <li><a href="https://www.solodev.com/product/create.stml">Product</a></li>
+            <li><a href="https://www.solodev.com/resources/">Resources</a></li>
+            <li><a href="https://www.solodev.com/customers/">Customersy</a></li>
+            <li><a href="https://www.solodev.com/blog/">Blog</a></li>
+          </ul> 
+        </div>
+        <select name="sectional_nav" id="sectional_nav" class="form-control hidden-md-up" onchange="window.location.href=this.value">
+          <option value="0">Navigate to...</option>
+          <option value="https://www.solodev.com/pricing/">Pricing</option>
+          <option value="https://www.solodev.com/product/create.stml">Product</option>
+          <option value="https://www.solodev.com/resources/">Resources</option>
+          <option value="https://www.solodev.com/customers/">Customers</option>
+          <option value="https://www.solodev.com/blog/">Blog</option>
+        </select>
+    </div>
+    <!-- <nav> 
+
+        <h1>This menu turns into a <code>&lt;select&gt;</code> when window is less than 960px to conserve space.</h1>
+      
+        <ul> 
+          <li><a href="#" class="active">Home</a></li> 
+          <li><a href="#books">Books</a></li> 
+          <li><a href="#blog">Blog</a></li> 
+          <li><a href="#about">About Us</a></li> 
+          <li><a href="#support">Support</a></li> 
+        </ul>
+        <script>
+            // DOM ready
+                $(function() {
+                
+                // Create the dropdown base
+                $("<select />").appendTo("nav");
+    
+                // Create default option "Go to..."
+                $("<option />", {
+                "selected": "selected",
+                "value"   : "",
+                "text"    : "Go to..."
+                }).appendTo("nav select");
+    
+                // Populate dropdown with menu items
+                $("nav a").each(function() {
+                var el = $(this);
+                $("<option />", {
+                    "value"   : el.attr("href"),
+                    "text"    : el.text()
+                }).appendTo("nav select");
+                });
+    
+                // To make dropdown actually work
+                // To make more unobtrusive: https://css-tricks.com/4064-unobtrusive-page-changer/
+                $("nav select").change(function() {
+                window.location = $(this).find("option:selected").val();
+                });
+    
+                });
+    
+          </script> -->
+      <!-- </nav> -->
+      
+</body>
+</html>
